@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:style="http://www.eclipse.org/papyrus/infra/gmfdiag/style">
+  <notation:Diagram xmi:id="_SYcQECX7Eeysh5zi2aDMjA" type="PapyrusUMLSequenceDiagram" name="Sequence Diagram" measurementUnit="Pixel">
+    <children xsi:type="notation:Shape" xmi:id="_SYcQESX7Eeysh5zi2aDMjA" type="Interaction_Shape">
+      <children xsi:type="notation:DecorationNode" xmi:id="_SYcQEiX7Eeysh5zi2aDMjA" type="Interaction_NameLabel"/>
+      <children xsi:type="notation:BasicCompartment" xmi:id="_SYcQEyX7Eeysh5zi2aDMjA" type="Interaction_SubfragmentCompartment">
+        <layoutConstraint xsi:type="notation:Bounds" xmi:id="_SYcQFCX7Eeysh5zi2aDMjA"/>
+      </children>
+      <element href="quetzlcoatl.uml#_SYbB8CX7Eeysh5zi2aDMjA"/>
+      <layoutConstraint xsi:type="notation:Bounds" xmi:id="_SYcQFSX7Eeysh5zi2aDMjA"/>
+    </children>
+    <styles xsi:type="notation:StringValueStyle" xmi:id="_SYcQFiX7Eeysh5zi2aDMjA" name="diagram_compatibility_version" stringValue="1.4.0"/>
+    <styles xsi:type="notation:DiagramStyle" xmi:id="_SYcQFyX7Eeysh5zi2aDMjA"/>
+    <styles xsi:type="style:PapyrusDiagramStyle" xmi:id="_SYcQGCX7Eeysh5zi2aDMjA" diagramKindId="org.eclipse.papyrus.uml.diagram.sequence">
+      <owner href="quetzlcoatl.uml#_SYWwgCX7Eeysh5zi2aDMjA"/>
+    </styles>
+    <element href="quetzlcoatl.uml#_SYbB8CX7Eeysh5zi2aDMjA"/>
+  </notation:Diagram>
+  <notation:Diagram xmi:id="_SYeFQCX7Eeysh5zi2aDMjA" type="PapyrusUMLComponentDiagram" name="Component Diagram" measurementUnit="Pixel">
+    <styles xsi:type="notation:StringValueStyle" xmi:id="_SYeFQSX7Eeysh5zi2aDMjA" name="diagram_compatibility_version" stringValue="1.4.0"/>
+    <styles xsi:type="notation:DiagramStyle" xmi:id="_SYesUCX7Eeysh5zi2aDMjA"/>
+    <styles xsi:type="style:PapyrusDiagramStyle" xmi:id="_SYesUSX7Eeysh5zi2aDMjA" diagramKindId="org.eclipse.papyrus.uml.diagram.component.root.package">
+      <owner href="quetzlcoatl.uml#_SYWwgCX7Eeysh5zi2aDMjA"/>
+    </styles>
+    <element href="quetzlcoatl.uml#_SYWwgCX7Eeysh5zi2aDMjA"/>
+  </notation:Diagram>
+</xmi:XMI>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:UMLsec="http://www.umlsec.de/profiles/UMLsec" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <uml:Model xmi:id="_SYWwgCX7Eeysh5zi2aDMjA" name="quetzlcoatl">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_SbQ6kCX7Eeysh5zi2aDMjA">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Interaction" xmi:id="_SYbB8CX7Eeysh5zi2aDMjA" name="Interaction1"/>
+    <packagedElement xmi:type="uml:Component" xmi:id="_ZXd3sCX7Eeysh5zi2aDMjA" name="Authentication">
+      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_h9CpkCX_Eeysh5zi2aDMjA" client="_ZXd3sCX7Eeysh5zi2aDMjA" supplier="_eGlVYCX_Eeysh5zi2aDMjA" contract="_eGlVYCX_Eeysh5zi2aDMjA"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_NiLH4CX_Eeysh5zi2aDMjA" client="_ZXd3sCX7Eeysh5zi2aDMjA" supplier="_K7ZS4CX_Eeysh5zi2aDMjA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_dCyWECX_Eeysh5zi2aDMjA" client="_kruaMCX7Eeysh5zi2aDMjA" supplier="_ZXd3sCX7Eeysh5zi2aDMjA"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_dgMDwCX_Eeysh5zi2aDMjA" client="_jn17UCX7Eeysh5zi2aDMjA" supplier="_ZXd3sCX7Eeysh5zi2aDMjA"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_oU5jgCX_Eeysh5zi2aDMjA" client="_kqZAoCX_Eeysh5zi2aDMjA" supplier="_mz-jUCX_Eeysh5zi2aDMjA"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_ox2lQCX_Eeysh5zi2aDMjA" client="_luEEICX_Eeysh5zi2aDMjA" supplier="_mz-jUCX_Eeysh5zi2aDMjA"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_ysJrMCX_Eeysh5zi2aDMjA" client="_qbFz8CX_Eeysh5zi2aDMjA" supplier="_tUPLUCX_Eeysh5zi2aDMjA"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_zSc2MCX_Eeysh5zi2aDMjA" client="_rVYR8CX_Eeysh5zi2aDMjA" supplier="_tUPLUCX_Eeysh5zi2aDMjA"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_49pecCX_Eeysh5zi2aDMjA" client="_sEpywCX_Eeysh5zi2aDMjA" supplier="_tUPLUCX_Eeysh5zi2aDMjA"/>
+    <packagedElement xmi:type="uml:Model" xmi:id="_G7y-4CYBEeysh5zi2aDMjA" name="Model13">
+      <packagedElement xmi:type="uml:Component" xmi:id="_hnvEwCX7Eeysh5zi2aDMjA" name="Backend">
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_jn17UCX7Eeysh5zi2aDMjA" name="SignUp" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_kruaMCX7Eeysh5zi2aDMjA" name="SignIn" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_kqZAoCX_Eeysh5zi2aDMjA" name="Edit" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_luEEICX_Eeysh5zi2aDMjA" name="Delete" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_qbFz8CX_Eeysh5zi2aDMjA" name="Upload" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_rVYR8CX_Eeysh5zi2aDMjA" name="Search" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_sEpywCX_Eeysh5zi2aDMjA" name="Comment" aggregation="composite"/>
+        <nestedClassifier xmi:type="uml:Interface" xmi:id="_K7ZS4CX_Eeysh5zi2aDMjA" name="ManageUserData"/>
+        <nestedClassifier xmi:type="uml:Interface" xmi:id="_eGlVYCX_Eeysh5zi2aDMjA" name="UserSession"/>
+        <nestedClassifier xmi:type="uml:Interface" xmi:id="_98xD0CX_Eeysh5zi2aDMjA" name="ManageCaffData"/>
+        <packagedElement xmi:type="uml:Component" xmi:id="_QCKN0CX-Eeysh5zi2aDMjA" name="UserData">
+          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_NDTakCX_Eeysh5zi2aDMjA" client="_QCKN0CX-Eeysh5zi2aDMjA" supplier="_K7ZS4CX_Eeysh5zi2aDMjA" contract="_K7ZS4CX_Eeysh5zi2aDMjA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Component" xmi:id="_mz-jUCX_Eeysh5zi2aDMjA" name="AccessControl">
+          <packagedElement xmi:type="uml:Usage" xmi:id="_pbf_MCX_Eeysh5zi2aDMjA" client="_mz-jUCX_Eeysh5zi2aDMjA" supplier="_eGlVYCX_Eeysh5zi2aDMjA"/>
+          <packagedElement xmi:type="uml:Usage" xmi:id="_0o5rwCX_Eeysh5zi2aDMjA" client="_mz-jUCX_Eeysh5zi2aDMjA" supplier="_tUPLUCX_Eeysh5zi2aDMjA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Component" xmi:id="_tUPLUCX_Eeysh5zi2aDMjA" name="WebApp">
+          <packagedElement xmi:type="uml:Usage" xmi:id="_1Vg6ICX_Eeysh5zi2aDMjA" client="_tUPLUCX_Eeysh5zi2aDMjA" supplier="_eGlVYCX_Eeysh5zi2aDMjA"/>
+          <packagedElement xmi:type="uml:Usage" xmi:id="_Bk6PMCYAEeysh5zi2aDMjA" client="_tUPLUCX_Eeysh5zi2aDMjA" supplier="_98xD0CX_Eeysh5zi2aDMjA"/>
+          <packagedElement xmi:type="uml:Usage" xmi:id="_B_WvgCYAEeysh5zi2aDMjA" client="_tUPLUCX_Eeysh5zi2aDMjA" supplier="_6nvowCX_Eeysh5zi2aDMjA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Component" xmi:id="_6nvowCX_Eeysh5zi2aDMjA" name="CaffParser"/>
+        <packagedElement xmi:type="uml:Component" xmi:id="_8TFJMCX_Eeysh5zi2aDMjA" name="CaffData">
+          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_AMj8MCYAEeysh5zi2aDMjA" client="_8TFJMCX_Eeysh5zi2aDMjA" supplier="_98xD0CX_Eeysh5zi2aDMjA" contract="_98xD0CX_Eeysh5zi2aDMjA"/>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_Sa5HICX7Eeysh5zi2aDMjA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Sa5uMCX7Eeysh5zi2aDMjA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.umlsec.de/profiles/UMLsec#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://UMLsec/UMLsec.uml#_kGQWQDnkEeCyb9nmG-9Lpw"/>
+    </profileApplication>
+  </uml:Model>
+  <UMLsec:critical xmi:id="_HAcq0CYAEeysh5zi2aDMjA" base_Class="_ZXd3sCX7Eeysh5zi2aDMjA" base_Component="_ZXd3sCX7Eeysh5zi2aDMjA" base_Classifier="_ZXd3sCX7Eeysh5zi2aDMjA">
+    <integrity>authenticate()</integrity>
+  </UMLsec:critical>
+  <UMLsec:critical xmi:id="_c5FyECYAEeysh5zi2aDMjA" base_Class="_QCKN0CX-Eeysh5zi2aDMjA" base_Component="_QCKN0CX-Eeysh5zi2aDMjA" base_Classifier="_QCKN0CX-Eeysh5zi2aDMjA">
+    <secrecy>password</secrecy>
+  </UMLsec:critical>
+  <UMLsec:secrecy xmi:id="_mWW9wCYAEeysh5zi2aDMjA" base_Dependency="_NDTakCX_Eeysh5zi2aDMjA"/>
+  <UMLsec:integrity xmi:id="_ol3iQCYAEeysh5zi2aDMjA" base_Dependency="_NiLH4CX_Eeysh5zi2aDMjA"/>
+  <UMLsec:critical xmi:id="_wf4ygCYAEeysh5zi2aDMjA" base_Class="_mz-jUCX_Eeysh5zi2aDMjA" base_Component="_mz-jUCX_Eeysh5zi2aDMjA" base_Classifier="_mz-jUCX_Eeysh5zi2aDMjA">
+    <integrity>authorize()</integrity>
+  </UMLsec:critical>
+  <UMLsec:critical xmi:id="_43SiUCYAEeysh5zi2aDMjA" base_Class="_6nvowCX_Eeysh5zi2aDMjA" base_Component="_6nvowCX_Eeysh5zi2aDMjA" base_Classifier="_6nvowCX_Eeysh5zi2aDMjA">
+    <integrity>parse()</integrity>
+  </UMLsec:critical>
+  <UMLsec:datasecurity xmi:id="_PCojICYBEeysh5zi2aDMjA" adversary="remote" base_Package="_G7y-4CYBEeysh5zi2aDMjA"/>
+  <UMLsec:integrity xmi:id="_NrFr8CYCEeysh5zi2aDMjA" base_Dependency="_dgMDwCX_Eeysh5zi2aDMjA"/>
+  <UMLsec:integrity xmi:id="_VJQGoCYCEeysh5zi2aDMjA" base_Dependency="_dCyWECX_Eeysh5zi2aDMjA"/>
+  <UMLsec:integrity xmi:id="_V-IgMCYCEeysh5zi2aDMjA" base_Dependency="_oU5jgCX_Eeysh5zi2aDMjA"/>
+  <UMLsec:integrity xmi:id="_WfReYCYCEeysh5zi2aDMjA" base_Dependency="_ox2lQCX_Eeysh5zi2aDMjA"/>
+  <UMLsec:integrity xmi:id="_aLkxACYCEeysh5zi2aDMjA" base_Dependency="_B_WvgCYAEeysh5zi2aDMjA"/>
+</xmi:XMI>
