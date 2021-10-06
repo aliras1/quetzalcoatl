@@ -1,9 +1,10 @@
-#Tue Oct 05 19:50:37 CEST 2021
+#Wed Oct 06 10:50:26 CEST 2021
 print.useInches=true
 rulergrid.rulerunit=2
 print.margin.left=0.5
 rulergrid.gridlinestyle=6
-zoom=1.0
+viewport.y=136
+zoom=1.25
 print.usePortrait=true
 print.page.height=11.0
 print.page.width=8.5

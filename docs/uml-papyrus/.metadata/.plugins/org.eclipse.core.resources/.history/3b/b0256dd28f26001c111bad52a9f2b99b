@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:UMLsec="http://www.umlsec.de/profiles/UMLsec" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <uml:Model xmi:id="_SYWwgCX7Eeysh5zi2aDMjA" name="quetzalcoatl">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_SbQ6kCX7Eeysh5zi2aDMjA">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Interaction" xmi:id="_SYbB8CX7Eeysh5zi2aDMjA" name="SignUp">
+      <lifeline xmi:type="uml:Lifeline" xmi:id="_O_FxYCZ5EeydQORC_-iOPA" name="Authenticator" coveredBy="_IBI5ECZ_EeydQORC_-iOPA _1-oV4CZ-EeydQORC_-iOPA _FZcMICaBEeydQORC_-iOPA _FZblECaBEeydQORC_-iOPA _L0Fw0CaAEeydQORC_-iOPA _vF_iwCaBEeydQORC_-iOPA _vF-7sCaBEeydQORC_-iOPA _vGAJ0CaBEeydQORC_-iOPA _FZczMCaBEeydQORC_-iOPA"/>
+      <lifeline xmi:type="uml:Lifeline" xmi:id="_ybqlcCZ-EeydQORC_-iOPA" name="User" coveredBy="_1-nu0CZ-EeydQORC_-iOPA"/>
+      <lifeline xmi:type="uml:Lifeline" xmi:id="_B2mCYCZ_EeydQORC_-iOPA" name="UserData" coveredBy="_IBKHMCZ_EeydQORC_-iOPA _L0FJwCaAEeydQORC_-iOPA _HWR-MCZ_EeydQORC_-iOPA _HWPh8CZ_EeydQORC_-iOPA _iABLACaBEeydQORC_-iOPA _h__84CaBEeydQORC_-iOPA _iAByECaBEeydQORC_-iOPA"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_IBI5ECZ_EeydQORC_-iOPA" name="Message13SendEvent" covered="_O_FxYCZ5EeydQORC_-iOPA" message="_IBISACZ_EeydQORC_-iOPA"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_1-nu0CZ-EeydQORC_-iOPA" name="Message6SendEvent" covered="_ybqlcCZ-EeydQORC_-iOPA" message="_1-hBICZ-EeydQORC_-iOPA"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_IBKHMCZ_EeydQORC_-iOPA" name="Message13ReceiveEvent" covered="_B2mCYCZ_EeydQORC_-iOPA" message="_IBISACZ_EeydQORC_-iOPA"/>
+      <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_HWPh8CZ_EeydQORC_-iOPA" name="ActionExecutionSpecification10" covered="_B2mCYCZ_EeydQORC_-iOPA" finish="_HWR-MCZ_EeydQORC_-iOPA" start="_IBKHMCZ_EeydQORC_-iOPA"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_1-oV4CZ-EeydQORC_-iOPA" name="Message6ReceiveEvent" covered="_O_FxYCZ5EeydQORC_-iOPA" message="_1-hBICZ-EeydQORC_-iOPA"/>
+      <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_FZcMICaBEeydQORC_-iOPA" name="BehaviorExecutionSpecification19Start" covered="_O_FxYCZ5EeydQORC_-iOPA" execution="_FZblECaBEeydQORC_-iOPA"/>
+      <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_FZblECaBEeydQORC_-iOPA" name="BehaviorExecutionSpecification19" covered="_O_FxYCZ5EeydQORC_-iOPA" finish="_FZczMCaBEeydQORC_-iOPA" start="_FZcMICaBEeydQORC_-iOPA"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_L0FJwCaAEeydQORC_-iOPA" name="Message15SendEvent" covered="_B2mCYCZ_EeydQORC_-iOPA" message="_L0D7oCaAEeydQORC_-iOPA"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_L0Fw0CaAEeydQORC_-iOPA" name="Message15ReceiveEvent" covered="_O_FxYCZ5EeydQORC_-iOPA" message="_L0D7oCaAEeydQORC_-iOPA"/>
+      <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_vF_iwCaBEeydQORC_-iOPA" name="BehaviorExecutionSpecification21Start" covered="_O_FxYCZ5EeydQORC_-iOPA" execution="_vF-7sCaBEeydQORC_-iOPA"/>
+      <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_vF-7sCaBEeydQORC_-iOPA" name="BehaviorExecutionSpecification21" covered="_O_FxYCZ5EeydQORC_-iOPA" finish="_vGAJ0CaBEeydQORC_-iOPA" start="_vF_iwCaBEeydQORC_-iOPA"/>
+      <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_vGAJ0CaBEeydQORC_-iOPA" name="BehaviorExecutionSpecification21Finish" covered="_O_FxYCZ5EeydQORC_-iOPA" execution="_vF-7sCaBEeydQORC_-iOPA"/>
+      <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_FZczMCaBEeydQORC_-iOPA" name="BehaviorExecutionSpecification19Finish" covered="_O_FxYCZ5EeydQORC_-iOPA" execution="_FZblECaBEeydQORC_-iOPA"/>
+      <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_HWR-MCZ_EeydQORC_-iOPA" name="ActionExecutionSpecification10Finish" covered="_B2mCYCZ_EeydQORC_-iOPA" execution="_HWPh8CZ_EeydQORC_-iOPA"/>
+      <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_iABLACaBEeydQORC_-iOPA" covered="_B2mCYCZ_EeydQORC_-iOPA"/>
+      <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_h__84CaBEeydQORC_-iOPA" covered="_B2mCYCZ_EeydQORC_-iOPA"/>
+      <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_iAByECaBEeydQORC_-iOPA" covered="_B2mCYCZ_EeydQORC_-iOPA"/>
+      <message xmi:type="uml:Message" xmi:id="_1-hBICZ-EeydQORC_-iOPA" name="Message6" receiveEvent="_1-oV4CZ-EeydQORC_-iOPA" sendEvent="_1-nu0CZ-EeydQORC_-iOPA"/>
+      <message xmi:type="uml:Message" xmi:id="_IBISACZ_EeydQORC_-iOPA" name="Message13" receiveEvent="_IBKHMCZ_EeydQORC_-iOPA" sendEvent="_IBI5ECZ_EeydQORC_-iOPA"/>
+      <message xmi:type="uml:Message" xmi:id="_L0D7oCaAEeydQORC_-iOPA" name="Created" messageSort="reply" receiveEvent="_L0Fw0CaAEeydQORC_-iOPA" sendEvent="_L0FJwCaAEeydQORC_-iOPA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Component" xmi:id="_ZXd3sCX7Eeysh5zi2aDMjA" name="Authentication">
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_XuaVICZ9EeydQORC_-iOPA" name="SignUp" type="_VqZ2ACZ9EeydQORC_-iOPA" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_aMm14CZ9EeydQORC_-iOPA" name="SignIn" type="_WqZTYCZ9EeydQORC_-iOPA" aggregation="composite"/>
+      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_h9CpkCX_Eeysh5zi2aDMjA" client="_ZXd3sCX7Eeysh5zi2aDMjA" supplier="_eGlVYCX_Eeysh5zi2aDMjA" contract="_eGlVYCX_Eeysh5zi2aDMjA"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_NiLH4CX_Eeysh5zi2aDMjA" client="_ZXd3sCX7Eeysh5zi2aDMjA" supplier="_K7ZS4CX_Eeysh5zi2aDMjA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Model" xmi:id="_G7y-4CYBEeysh5zi2aDMjA" name="quetzalcoatl">
+      <packagedElement xmi:type="uml:Component" xmi:id="_hnvEwCX7Eeysh5zi2aDMjA" name="Backend">
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_jn17UCX7Eeysh5zi2aDMjA" name="SignUp" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_kruaMCX7Eeysh5zi2aDMjA" name="SignIn" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_kqZAoCX_Eeysh5zi2aDMjA" name="Edit" type="_MouhgCZ6EeydQORC_-iOPA" aggregation="composite">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_q4LtQCZ7EeydQORC_-iOPA"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_q5AMoCZ7EeydQORC_-iOPA" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_luEEICX_Eeysh5zi2aDMjA" name="Delete" type="_CkljECZ6EeydQORC_-iOPA" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_qbFz8CX_Eeysh5zi2aDMjA" name="Upload" type="_qGTZ0CZ6EeydQORC_-iOPA" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_rVYR8CX_Eeysh5zi2aDMjA" name="Search" type="_xLpE0CZ6EeydQORC_-iOPA" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_sEpywCX_Eeysh5zi2aDMjA" name="Comment" type="_yEpJYCZ6EeydQORC_-iOPA" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_GE-9ICZ5EeydQORC_-iOPA" name="Download" type="_y_V3ECZ6EeydQORC_-iOPA" aggregation="composite"/>
+        <nestedClassifier xmi:type="uml:Interface" xmi:id="_K7ZS4CX_Eeysh5zi2aDMjA" name="ManageUserData"/>
+        <nestedClassifier xmi:type="uml:Interface" xmi:id="_eGlVYCX_Eeysh5zi2aDMjA" name="UserSession"/>
+        <nestedClassifier xmi:type="uml:Interface" xmi:id="_98xD0CX_Eeysh5zi2aDMjA" name="ManageCaffData"/>
+        <nestedClassifier xmi:type="uml:Interface" xmi:id="_lEe5MCaPEeyDJdoyEBRu0Q" name="IAuthorize"/>
+        <packagedElement xmi:type="uml:Component" xmi:id="_QCKN0CX-Eeysh5zi2aDMjA" name="UserData">
+          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_NDTakCX_Eeysh5zi2aDMjA" client="_QCKN0CX-Eeysh5zi2aDMjA" supplier="_K7ZS4CX_Eeysh5zi2aDMjA" contract="_K7ZS4CX_Eeysh5zi2aDMjA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Component" xmi:id="_mz-jUCX_Eeysh5zi2aDMjA" name="AccessControl">
+          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_mXlf0CaPEeyDJdoyEBRu0Q" client="_mz-jUCX_Eeysh5zi2aDMjA" supplier="_lEe5MCaPEeyDJdoyEBRu0Q" contract="_lEe5MCaPEeyDJdoyEBRu0Q"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Component" xmi:id="_tUPLUCX_Eeysh5zi2aDMjA" name="WebApp">
+          <ownedAttribute xmi:type="uml:Port" xmi:id="_nu3BUCZ6EeydQORC_-iOPA" name="Upload" type="_qGTZ0CZ6EeydQORC_-iOPA" aggregation="composite"/>
+          <ownedAttribute xmi:type="uml:Port" xmi:id="_1KJhwCZ6EeydQORC_-iOPA" name="Search" type="_xLpE0CZ6EeydQORC_-iOPA" aggregation="composite"/>
+          <ownedAttribute xmi:type="uml:Port" xmi:id="_2Nq0QCZ6EeydQORC_-iOPA" name="Comment" type="_yEpJYCZ6EeydQORC_-iOPA" aggregation="composite"/>
+          <ownedAttribute xmi:type="uml:Port" xmi:id="_3L0ekCZ6EeydQORC_-iOPA" name="Download" type="_y_V3ECZ6EeydQORC_-iOPA" aggregation="composite"/>
+          <ownedAttribute xmi:type="uml:Port" xmi:id="_RBV7ACaPEeyDJdoyEBRu0Q" name="Delete" type="_CkljECZ6EeydQORC_-iOPA" aggregation="composite"/>
+          <ownedAttribute xmi:type="uml:Port" xmi:id="_SJeAsCaPEeyDJdoyEBRu0Q" name="Edit" type="_MouhgCZ6EeydQORC_-iOPA" aggregation="composite"/>
+          <packagedElement xmi:type="uml:Usage" xmi:id="_1Vg6ICX_Eeysh5zi2aDMjA" client="_tUPLUCX_Eeysh5zi2aDMjA" supplier="_eGlVYCX_Eeysh5zi2aDMjA"/>
+          <packagedElement xmi:type="uml:Usage" xmi:id="_Bk6PMCYAEeysh5zi2aDMjA" client="_tUPLUCX_Eeysh5zi2aDMjA" supplier="_98xD0CX_Eeysh5zi2aDMjA"/>
+          <packagedElement xmi:type="uml:Usage" xmi:id="_B_WvgCYAEeysh5zi2aDMjA" client="_tUPLUCX_Eeysh5zi2aDMjA" supplier="_6nvowCX_Eeysh5zi2aDMjA"/>
+          <packagedElement xmi:type="uml:Usage" xmi:id="_phaXgCaPEeyDJdoyEBRu0Q" client="_tUPLUCX_Eeysh5zi2aDMjA" supplier="_lEe5MCaPEeyDJdoyEBRu0Q"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Component" xmi:id="_6nvowCX_Eeysh5zi2aDMjA" name="CaffParser"/>
+        <packagedElement xmi:type="uml:Component" xmi:id="_8TFJMCX_Eeysh5zi2aDMjA" name="CaffData">
+          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_AMj8MCYAEeysh5zi2aDMjA" client="_8TFJMCX_Eeysh5zi2aDMjA" supplier="_98xD0CX_Eeysh5zi2aDMjA" contract="_98xD0CX_Eeysh5zi2aDMjA"/>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Component" xmi:id="_P6npICYDEeysh5zi2aDMjA" name="WebClient">
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_1YPysCZ7EeydQORC_-iOPA" aggregation="composite"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_CkljECZ6EeydQORC_-iOPA" name="IDelete"/>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_MouhgCZ6EeydQORC_-iOPA" name="IEdit"/>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_qGTZ0CZ6EeydQORC_-iOPA" name="IUpload"/>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_xLpE0CZ6EeydQORC_-iOPA" name="ISearch"/>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_yEpJYCZ6EeydQORC_-iOPA" name="IComment"/>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_y_V3ECZ6EeydQORC_-iOPA" name="IDownload"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_JBXR4CZ9EeydQORC_-iOPA" client="_qbFz8CX_Eeysh5zi2aDMjA" supplier="_nu3BUCZ6EeydQORC_-iOPA"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_Js5iMCZ9EeydQORC_-iOPA" client="_rVYR8CX_Eeysh5zi2aDMjA" supplier="_1KJhwCZ6EeydQORC_-iOPA"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_KR33gCZ9EeydQORC_-iOPA" client="_sEpywCX_Eeysh5zi2aDMjA" supplier="_2Nq0QCZ6EeydQORC_-iOPA"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_LAnz4CZ9EeydQORC_-iOPA" client="_GE-9ICZ5EeydQORC_-iOPA" supplier="_3L0ekCZ6EeydQORC_-iOPA"/>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_VqZ2ACZ9EeydQORC_-iOPA" name="ISignUp"/>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_WqZTYCZ9EeydQORC_-iOPA" name="ISignIn"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_epVf4CZ9EeydQORC_-iOPA" client="_jn17UCX7Eeysh5zi2aDMjA" supplier="_XuaVICZ9EeydQORC_-iOPA"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_hGT4oCZ9EeydQORC_-iOPA" client="_kruaMCX7Eeysh5zi2aDMjA" supplier="_aMm14CZ9EeydQORC_-iOPA"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_5Bs6wCZ9EeydQORC_-iOPA" client="_1YPysCZ7EeydQORC_-iOPA" supplier="_jn17UCX7Eeysh5zi2aDMjA"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_5no5YCZ9EeydQORC_-iOPA" client="_1YPysCZ7EeydQORC_-iOPA" supplier="_kruaMCX7Eeysh5zi2aDMjA"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_6NyTYCZ9EeydQORC_-iOPA" client="_1YPysCZ7EeydQORC_-iOPA" supplier="_kqZAoCX_Eeysh5zi2aDMjA"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_6rx28CZ9EeydQORC_-iOPA" client="_1YPysCZ7EeydQORC_-iOPA" supplier="_luEEICX_Eeysh5zi2aDMjA"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_7N1bICZ9EeydQORC_-iOPA" client="_1YPysCZ7EeydQORC_-iOPA" supplier="_qbFz8CX_Eeysh5zi2aDMjA"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_7vCqwCZ9EeydQORC_-iOPA" client="_1YPysCZ7EeydQORC_-iOPA" supplier="_rVYR8CX_Eeysh5zi2aDMjA"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_8S_sYCZ9EeydQORC_-iOPA" client="_1YPysCZ7EeydQORC_-iOPA" supplier="_sEpywCX_Eeysh5zi2aDMjA"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_8-_PsCZ9EeydQORC_-iOPA" client="_1YPysCZ7EeydQORC_-iOPA" supplier="_GE-9ICZ5EeydQORC_-iOPA"/>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_Sa5HICX7Eeysh5zi2aDMjA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Sa5uMCX7Eeysh5zi2aDMjA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.umlsec.de/profiles/UMLsec#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://UMLsec/UMLsec.uml#_kGQWQDnkEeCyb9nmG-9Lpw"/>
+    </profileApplication>
+  </uml:Model>
+  <UMLsec:critical xmi:id="_HAcq0CYAEeysh5zi2aDMjA" base_Class="_ZXd3sCX7Eeysh5zi2aDMjA" base_Component="_ZXd3sCX7Eeysh5zi2aDMjA" base_Classifier="_ZXd3sCX7Eeysh5zi2aDMjA">
+    <integrity>authenticate()</integrity>
+  </UMLsec:critical>
+  <UMLsec:critical xmi:id="_c5FyECYAEeysh5zi2aDMjA" base_Class="_QCKN0CX-Eeysh5zi2aDMjA" base_Component="_QCKN0CX-Eeysh5zi2aDMjA" base_Classifier="_QCKN0CX-Eeysh5zi2aDMjA">
+    <secrecy>password</secrecy>
+  </UMLsec:critical>
+  <UMLsec:secrecy xmi:id="_mWW9wCYAEeysh5zi2aDMjA" base_Dependency="_NDTakCX_Eeysh5zi2aDMjA"/>
+  <UMLsec:integrity xmi:id="_ol3iQCYAEeysh5zi2aDMjA" base_Dependency="_NiLH4CX_Eeysh5zi2aDMjA"/>
+  <UMLsec:critical xmi:id="_wf4ygCYAEeysh5zi2aDMjA" base_Class="_mz-jUCX_Eeysh5zi2aDMjA" base_Component="_mz-jUCX_Eeysh5zi2aDMjA" base_Classifier="_mz-jUCX_Eeysh5zi2aDMjA">
+    <integrity>authorize()</integrity>
+  </UMLsec:critical>
+  <UMLsec:critical xmi:id="_43SiUCYAEeysh5zi2aDMjA" base_Class="_6nvowCX_Eeysh5zi2aDMjA" base_Component="_6nvowCX_Eeysh5zi2aDMjA" base_Classifier="_6nvowCX_Eeysh5zi2aDMjA">
+    <integrity>parse()</integrity>
+  </UMLsec:critical>
+  <UMLsec:datasecurity xmi:id="_PCojICYBEeysh5zi2aDMjA" adversary="remote" base_Package="_G7y-4CYBEeysh5zi2aDMjA"/>
+  <UMLsec:integrity xmi:id="_aLkxACYCEeysh5zi2aDMjA" base_Dependency="_B_WvgCYAEeysh5zi2aDMjA"/>
+  <UMLsec:integrity xmi:id="_L109kCZ9EeydQORC_-iOPA" base_Dependency="_LAnz4CZ9EeydQORC_-iOPA"/>
+  <UMLsec:integrity xmi:id="_Mpt4oCZ9EeydQORC_-iOPA" base_Dependency="_KR33gCZ9EeydQORC_-iOPA"/>
+  <UMLsec:integrity xmi:id="_NPPAgCZ9EeydQORC_-iOPA" base_Dependency="_Js5iMCZ9EeydQORC_-iOPA"/>
+  <UMLsec:integrity xmi:id="_NyRcICZ9EeydQORC_-iOPA" base_Dependency="_JBXR4CZ9EeydQORC_-iOPA"/>
+  <UMLsec:integrity xmi:id="_khK18CZ9EeydQORC_-iOPA" base_Dependency="_hGT4oCZ9EeydQORC_-iOPA"/>
+  <UMLsec:integrity xmi:id="_ldWxYCZ9EeydQORC_-iOPA" base_Dependency="_epVf4CZ9EeydQORC_-iOPA"/>
+  <UMLsec:integrity xmi:id="_y8z68CaPEeyDJdoyEBRu0Q" base_Dependency="_phaXgCaPEeyDJdoyEBRu0Q"/>
+</xmi:XMI>

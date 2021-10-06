@@ -26,7 +26,14 @@
 	<section name="org.eclipse.papyrus.infra.ui.emf.providers.EMFGraphicalContentProvider_history__platform:/resource/quetzalcoatl/quetzalcoatl.uml:uml:Type:type">
 		<section name="History">
 			<list key="PreviousSelection">
-				<item value="platform:/resource/quetzalcoatl/quetzalcoatl.uml#_DXatQCXBEeysLZZvanKW0g"/>
+				<item value="platform:/resource/quetzalcoatl/quetzalcoatl.uml#_CkljECZ6EeydQORC_-iOPA"/>
+				<item value="platform:/resource/quetzalcoatl/quetzalcoatl.uml#_MouhgCZ6EeydQORC_-iOPA"/>
+				<item value="platform:/resource/quetzalcoatl/quetzalcoatl.uml#_WqZTYCZ9EeydQORC_-iOPA"/>
+				<item value="platform:/resource/quetzalcoatl/quetzalcoatl.uml#_VqZ2ACZ9EeydQORC_-iOPA"/>
+				<item value="platform:/resource/quetzalcoatl/quetzalcoatl.uml#_y_V3ECZ6EeydQORC_-iOPA"/>
+				<item value="platform:/resource/quetzalcoatl/quetzalcoatl.uml#_yEpJYCZ6EeydQORC_-iOPA"/>
+				<item value="platform:/resource/quetzalcoatl/quetzalcoatl.uml#_xLpE0CZ6EeydQORC_-iOPA"/>
+				<item value="platform:/resource/quetzalcoatl/quetzalcoatl.uml#_qGTZ0CZ6EeydQORC_-iOPA"/>
 			</list>
 		</section>
 	</section>
@@ -43,5 +50,18 @@
 				<item value="platform:/resource/quetzlcoatl/quetzlcoatl.uml#_K7ZS4CX_Eeysh5zi2aDMjA"/>
 			</list>
 		</section>
+	</section>
+	<section name="org.eclipse.papyrus.infra.ui.emf.providers.EMFGraphicalContentProvider_history__platform:/resource/quetzalcoatl/quetzalcoatl.uml:uml:Association:type">
+	</section>
+	<section name="org.eclipse.papyrus.infra.ui.emf.providers.EMFGraphicalContentProvider_history__platform:/resource/quetzalcoatl/quetzalcoatl.uml:uml:Interface:required">
+		<section name="History">
+			<list key="PreviousSelection">
+				<item value="platform:/resource/quetzalcoatl/quetzalcoatl.uml#_CkljECZ6EeydQORC_-iOPA"/>
+			</list>
+		</section>
+	</section>
+	<section name="org.eclipse.papyrus.infra.ui.emf.providers.EMFGraphicalContentProvider_history__platform:/resource/quetzalcoatl/quetzalcoatl.uml:uml:MessageEnd:receiveEvent">
+	</section>
+	<section name="org.eclipse.papyrus.infra.ui.emf.providers.EMFGraphicalContentProvider_history__platform:/resource/quetzalcoatl/quetzalcoatl.notation:stylesheets:StyleSheet:stylesheets">
 	</section>
 </section>

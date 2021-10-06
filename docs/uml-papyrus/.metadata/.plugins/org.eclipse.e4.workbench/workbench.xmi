@@ -2,7 +2,7 @@
 <application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_hplsYCQuEeyUD6tpqJEHnw" elementId="org.eclipse.e4.legacy.ide.application" contributorURI="platform:/plugin/org.eclipse.ui.workbench" selectedElement="_hplsYSQuEeyUD6tpqJEHnw" bindingContexts="_hplsaiQuEeyUD6tpqJEHnw">
   <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workbench>&#xD;&#xA;&lt;mruList>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.papyrus.infra.core.papyrusEditor&quot; name=&quot;quetzalcoatl.di&quot; tooltip=&quot;quetzalcoatl/quetzalcoatl.di&quot;>&#xD;&#xA;&lt;persistable path=&quot;/quetzalcoatl/quetzalcoatl.di&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.papyrus.infra.core.papyrusEditor&quot; name=&quot;quetzalcoatl.di&quot; tooltip=&quot;quetzlcoatl/quetzalcoatl.di&quot;>&#xD;&#xA;&lt;persistable path=&quot;/quetzlcoatl/quetzalcoatl.di&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.papyrus.infra.core.papyrusEditor&quot; name=&quot;quetzlcoatl.di&quot; tooltip=&quot;quetzlcoatl/quetzlcoatl.di&quot;>&#xD;&#xA;&lt;persistable path=&quot;/quetzlcoatl/quetzlcoatl.di&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.uml2.uml.editor.presentation.UMLEditorID&quot; name=&quot;UMLsec4UML2.profile.uml&quot; tooltip=&quot;quetzalcoatl/UMLsec4UML2.profile.uml&quot;>&#xD;&#xA;&lt;persistable path=&quot;/quetzalcoatl/UMLsec4UML2.profile.uml&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.papyrus.infra.core.papyrusEditor&quot; name=&quot;test.di&quot; tooltip=&quot;test/test.di&quot;>&#xD;&#xA;&lt;persistable path=&quot;/test/test.di&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.papyrus.infra.core.papyrusEditor&quot; name=&quot;umlsec.profile.di&quot; tooltip=&quot;quetzalcoatl/umlsec.profile.di&quot;>&#xD;&#xA;&lt;persistable path=&quot;/quetzalcoatl/umlsec.profile.di&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;/mruList>&#xD;&#xA;&lt;/workbench>"/>
   <tags>activeSchemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
-  <children xsi:type="basic:TrimmedWindow" xmi:id="_hplsYSQuEeyUD6tpqJEHnw" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.ui.workbench" selectedElement="_iLI6QSQuEeyUD6tpqJEHnw" x="373" y="110" width="1024" height="768">
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_hplsYSQuEeyUD6tpqJEHnw" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.ui.workbench" selectedElement="_iLI6QSQuEeyUD6tpqJEHnw" x="0" y="0" width="1024" height="768">
     <persistedState key="coolBarVisible" value="true"/>
     <persistedState key="perspectiveBarVisible" value="true"/>
     <persistedState key="isRestored" value="true"/>
@@ -67,7 +67,7 @@
                 </children>
               </children>
             </children>
-            <children xsi:type="basic:PartSashContainer" xmi:id="_iXxoGyQuEeyUD6tpqJEHnw" containerData="8000" selectedElement="_iXxoHSQuEeyUD6tpqJEHnw">
+            <children xsi:type="basic:PartSashContainer" xmi:id="_iXxoGyQuEeyUD6tpqJEHnw" containerData="8000" selectedElement="_iXxoHCQuEeyUD6tpqJEHnw">
               <children xsi:type="advanced:Placeholder" xmi:id="_iXxoHCQuEeyUD6tpqJEHnw" elementId="org.eclipse.ui.editorss" containerData="7000" ref="_iXZ0oCQuEeyUD6tpqJEHnw"/>
               <children xsi:type="basic:PartStack" xmi:id="_iXxoHSQuEeyUD6tpqJEHnw" elementId="org.eclipse.papyrus.perspective.folder.bottom" containerData="3000" selectedElement="_iXxoHiQuEeyUD6tpqJEHnw">
                 <children xsi:type="advanced:Placeholder" xmi:id="_iXxoHiQuEeyUD6tpqJEHnw" elementId="org.eclipse.ui.views.PropertySheet" ref="_iXqTUCQuEeyUD6tpqJEHnw" closeable="true">
@@ -125,10 +125,10 @@
       <tags>categoryTag:Help</tags>
     </sharedElements>
     <sharedElements xsi:type="advanced:Area" xmi:id="_iXZ0oCQuEeyUD6tpqJEHnw" elementId="org.eclipse.ui.editorss" selectedElement="_iXZ0oSQuEeyUD6tpqJEHnw">
-      <children xsi:type="basic:PartStack" xmi:id="_iXZ0oSQuEeyUD6tpqJEHnw" elementId="org.eclipse.e4.primaryDataStack" selectedElement="_wOTWcCYEEeysh5zi2aDMjA">
+      <children xsi:type="basic:PartStack" xmi:id="_iXZ0oSQuEeyUD6tpqJEHnw" elementId="org.eclipse.e4.primaryDataStack" selectedElement="_YlOrkCaBEeydQORC_-iOPA">
         <tags>org.eclipse.e4.primaryDataStack</tags>
         <tags>EditorStack</tags>
-        <children xsi:type="basic:Part" xmi:id="_wOTWcCYEEeysh5zi2aDMjA" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="quetzalcoatl.di" iconURI="platform:/plugin/org.eclipse.papyrus.editor/icons/papyrus/Papyrus_16x16.gif" closeable="true">
+        <children xsi:type="basic:Part" xmi:id="_YlOrkCaBEeydQORC_-iOPA" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="quetzalcoatl.di" iconURI="platform:/plugin/org.eclipse.papyrus.editor/icons/papyrus/Papyrus_16x16.gif" closeable="true">
           <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.papyrus.infra.core.papyrusEditor&quot; name=&quot;quetzalcoatl.di&quot; partName=&quot;quetzalcoatl.di&quot; title=&quot;quetzalcoatl.di&quot; tooltip=&quot;quetzalcoatl/quetzalcoatl.di&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/quetzalcoatl/quetzalcoatl.di&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>removeOnHide</tags>
@@ -235,7 +235,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_iOGHoCQuEeyUD6tpqJEHnw" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_QPDgsCYGEey_H_g-hLqfAA" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_hqzNWyQuEeyUD6tpqJEHnw"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_6JeLYCaOEeyDJdoyEBRu0Q" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_hqzNWyQuEeyUD6tpqJEHnw"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_iOGHoSQuEeyUD6tpqJEHnw" elementId="group.edit" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -260,7 +260,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_iOHVwSQuEeyUD6tpqJEHnw" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_QPJAQCYGEey_H_g-hLqfAA" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" enabled="false" type="Check" command="_hqxYRiQuEeyUD6tpqJEHnw"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_6JjD4CaOEeyDJdoyEBRu0Q" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" enabled="false" type="Check" command="_hqxYRiQuEeyUD6tpqJEHnw"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_iOHVwiQuEeyUD6tpqJEHnw" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -2924,7 +2924,7 @@
   <addons xmi:id="_hplsdiQuEeyUD6tpqJEHnw" elementId="MinMax Addon" contributorURI="platform:/plugin/org.eclipse.ui.workbench" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.minmax.MinMaxAddon"/>
   <addons xmi:id="_hplsdyQuEeyUD6tpqJEHnw" elementId="org.eclipse.ui.workbench.addon.0" contributorURI="platform:/plugin/org.eclipse.ui.workbench" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.HandlerProcessingAddon"/>
   <addons xmi:id="_hp1kACQuEeyUD6tpqJEHnw" elementId="SplitterAddon" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.splitteraddon.SplitterAddon"/>
-  <addons xmi:id="_IYS0IKimEeS11vbz3f9ezw" elementId="org.eclipse.ui.ide.addon.0" contributorURI="platform:/plugin/org.eclipse.ui.ide" contributionURI="bundleclass://org.eclipse.ui.ide/org.eclipse.ui.internal.ide.addons.SaveAllDirtyPartsAddon"/>
+  <addons xmi:id="_5hflYCaOEeyDJdoyEBRu0Q" elementId="org.eclipse.ui.ide.addon.0" contributionURI="bundleclass://org.eclipse.ui.ide/org.eclipse.ui.internal.ide.addons.SaveAllDirtyPartsAddon"/>
   <addons xmi:id="_OuENQESaEeiAQ-my3lrC5g" elementId="org.eclipse.papyrus.infra.ui.fonts.addon.0" contributorURI="platform:/plugin/org.eclipse.papyrus.infra.ui.fonts" contributionURI="bundleclass://org.eclipse.papyrus.infra.ui.fonts/org.eclipse.papyrus.infra.ui.fonts.internal.addon.FontAddon"/>
   <addons xmi:id="_dz0JgGOlEeSMMaPQU2nlzw" elementId="org.eclipse.ui.ide.application.addon.0" contributorURI="platform:/plugin/org.eclipse.ui.ide.application" contributionURI="bundleclass://org.eclipse.ui.ide.application/org.eclipse.ui.internal.ide.application.addons.ModelCleanupAddon"/>
   <categories xmi:id="_hqaLwCQuEeyUD6tpqJEHnw" elementId="org.eclipse.ui.category.edit" name="Edit"/>
