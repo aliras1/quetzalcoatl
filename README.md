@@ -13,3 +13,5 @@ To open the project, you need to
 
 `docs/uml-staruml` contains a StarUML project which consists of the system's sequence diagrams. 
 I (@aliras1) was unable to make Papyrus' sequence diagram editor work, thus I ditched it in favor of StarUML.
+
+To edit the diagrams in the `drawio` folder visit [the online editors page.](https://app.diagrams.net/)
