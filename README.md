@@ -1,5 +1,7 @@
 # quetzalcoatl
 
+For the home assigment artefacts pls wisit the [wiki](https://github.com/aliras1/quetzalcoatl/wiki)
+
 ## Docs
 
 `docs/diagrams` contains the exported diagrams that describe the system.
