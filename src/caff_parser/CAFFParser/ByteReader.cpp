@@ -97,7 +97,8 @@ template<class T> T ByteReader::ReadAny()
     T ret;
     char* dst = (char*)&ret;
     char* src = (char*)&(data[pointer]);
-    StoreBytes(src, dst, sizeof(T));
+    size_t size = sizeof(T);
+    StoreBytes(src, dst, size);
     pointer += sizeof(T);
     return ret;
 }
@@ -108,12 +109,15 @@ void ByteReader::StoreBytes(
     size_t size
 )
 {
+    std::printf("----------------\n");
     for (size_t i = 0; i < size; i++)
     {
         if (O32_HOST_ORDER == O32_LITTLE_ENDIAN)
         {
-            if (endian == LITTLE_ENDIAN)
+            if (endian == LITTLE_ENDIAN) {
+                std::printf("%02X\n", src[i]);
                 dst[i] = src[i];
+            }                
             else if (endian == BIG_ENDIAN)
                 dst[i] = src[(size - i - 1)];
             else if (endian == POP_ENDIAN)
