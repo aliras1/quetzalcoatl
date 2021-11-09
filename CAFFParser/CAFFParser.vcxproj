@@ -145,6 +145,7 @@
   <ItemGroup>
     <ClCompile Include="ByteReader.cpp" />
     <ClCompile Include="CAFFParser.cpp" />
+    <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

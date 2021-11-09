@@ -77,7 +77,7 @@ unsigned int ByteReader::ReadUInt32()
 
 long long int ByteReader::ReadInt64()
 {
-    return ReadAny<long int>();
+    return ReadAny<long long int>();
 }
 
 long long unsigned int ByteReader::ReadUInt64()

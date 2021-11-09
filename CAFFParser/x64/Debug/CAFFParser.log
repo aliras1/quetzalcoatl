@@ -1,0 +1,12 @@
+﻿  Main.cpp
+C:\Users\User\quetzalcoatl\CAFFParser\CAFFParser.h(25,30): warning C4244: 'initializing': conversion from '__int64' to 'long', possible loss of data
+C:\Users\User\quetzalcoatl\CAFFParser\CAFFParser.h(26,25): warning C4244: 'initializing': conversion from '__int64' to 'long', possible loss of data
+C:\Users\User\quetzalcoatl\CAFFParser\CAFFParser.h(35,28): warning C4244: 'initializing': conversion from '__int64' to 'long', possible loss of data
+C:\Users\User\quetzalcoatl\CAFFParser\CAFFParser.h(39,38): warning C4244: 'initializing': conversion from '__int64' to 'long', possible loss of data
+C:\Users\User\quetzalcoatl\CAFFParser\CAFFParser.h(40,21): warning C4244: 'initializing': conversion from '__int64' to 'long', possible loss of data
+C:\Users\User\quetzalcoatl\CAFFParser\CAFFParser.h(44,28): warning C4244: 'initializing': conversion from '__int64' to 'long', possible loss of data
+C:\Users\User\quetzalcoatl\CAFFParser\CAFFParser.h(45,25): warning C4244: 'initializing': conversion from '__int64' to 'long', possible loss of data
+C:\Users\User\quetzalcoatl\CAFFParser\CAFFParser.h(46,19): warning C4244: 'initializing': conversion from '__int64' to 'long', possible loss of data
+C:\Users\User\quetzalcoatl\CAFFParser\CAFFParser.h(47,20): warning C4244: 'initializing': conversion from '__int64' to 'long', possible loss of data
+C:\Users\User\quetzalcoatl\CAFFParser\CAFFParser.h(54): warning C4715: 'CAFFParser::parser': not all control paths return a value
+  CAFFParser.vcxproj -> C:\Users\User\quetzalcoatl\x64\Debug\CAFFParser.exe
