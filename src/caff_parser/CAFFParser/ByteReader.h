@@ -35,7 +35,7 @@ namespace Orionark
         class ByteReader
         {
         public:
-            ByteReader(char*);
+            ByteReader(char*, size_t);
             ~ByteReader();
 
             void SetEndian(ByteEndianness);
@@ -62,6 +62,7 @@ namespace Orionark
 
         private:
             const char* data;
+            size_t size;
             ByteEndianness endian;
 
             template<class T> T ReadAny();

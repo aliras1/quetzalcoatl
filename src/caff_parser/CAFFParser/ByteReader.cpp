@@ -1,9 +1,12 @@
+#include <iostream>
+
 #include "ByteReader.h"
 
 using namespace Orionark::Utility;
 
-ByteReader::ByteReader(char* data)
+ByteReader::ByteReader(char* data, size_t size)
     : data(data),
+    size(size),
     pointer(0)
 {
     if (O32_HOST_ORDER == O32_LITTLE_ENDIAN)
@@ -94,11 +97,19 @@ std::string ByteReader::ReadString(unsigned int length)
 
 template<class T> T ByteReader::ReadAny()
 {
+    size_t size_of_t = sizeof(T);
+
+    if (pointer + size_of_t >= this->size) {
+        std::cout << "reading out of bound\n";
+        exit(1);
+    }
+
+
     T ret;
     char* dst = (char*)&ret;
     char* src = (char*)&(data[pointer]);
-    size_t size = sizeof(T);
-    StoreBytes(src, dst, size);
+    
+    StoreBytes(src, dst, size_of_t);
     pointer += sizeof(T);
     return ret;
 }

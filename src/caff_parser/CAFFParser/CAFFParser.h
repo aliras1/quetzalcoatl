@@ -9,9 +9,10 @@ class CAFFParser
 public:
 
 
-	bool parser(char* data) {
-		ByteReader bytereader(data);
+	bool parser(char* data, size_t size) {
+		ByteReader bytereader(data, size);
 		bytereader.SetEndian(LITTLE_ENDIAN);
+
 		//Caff header beolvasása
 		char CAFFheaderId = bytereader.ReadByte();
 		if (CAFFheaderId != 1) {

@@ -26,6 +26,6 @@ int main() {
 		
 	is.close();
 	
-	caffparser.parser(buffer);
+	caffparser.parser(buffer, length);
 	delete[] buffer;
 }
