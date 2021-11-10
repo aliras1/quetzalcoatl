@@ -99,18 +99,17 @@ template<class T> T ByteReader::ReadAny()
 {
     size_t size_of_t = sizeof(T);
 
-    if (pointer + size_of_t >= this->size) {
+    if (pointer + size_of_t > this->size) {
         std::cout << "reading out of bound\n";
         exit(1);
     }
-
 
     T ret;
     char* dst = (char*)&ret;
     char* src = (char*)&(data[pointer]);
     
     StoreBytes(src, dst, size_of_t);
-    pointer += sizeof(T);
+    pointer += size_of_t;
     return ret;
 }
 
