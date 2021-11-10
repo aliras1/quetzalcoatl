@@ -141,6 +141,7 @@
   <ItemGroup>
     <ClInclude Include="ByteReader.h" />
     <ClInclude Include="CAFFParser.h" />
+    <ClInclude Include="Gif.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ByteReader.cpp" />

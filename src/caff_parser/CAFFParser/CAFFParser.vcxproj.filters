@@ -21,6 +21,9 @@
     <ClInclude Include="ByteReader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Gif.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CAFFParser.cpp">
