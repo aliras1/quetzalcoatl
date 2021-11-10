@@ -9,21 +9,6 @@
 using namespace std;
 using namespace Orionark::Utility;
 
-struct CAFF
-{
-	//meg ideel lehetne menteni dolgokat
-	vector<CIFF> ciffs;
-};
-
-struct CIFF {
-	int id;
-	long long int contentSize;
-	long long int width;
-	long long int height;
-	string caption;
-	vector<string> tags;
-	//meg ide amibe a kepet magat taroljuk 
-};
 
 class CAFFParser
 {
@@ -59,7 +44,7 @@ public:
 	}
 
 	bool parse() {
-		//Caff header beolvas�sa
+		//Caff header beolvasasa
 		char CAFFheaderId = this->bytereader->ReadByte();
 		if (CAFFheaderId != 1) {
 			//return false;
