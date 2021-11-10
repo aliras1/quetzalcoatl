@@ -3,15 +3,6 @@
 #include <cstring>
 #include <iostream>
 
-#define _CRT_SECURE_NO_WARNINGS
-
-char* copy2(const char* orig) {
-	char* res = new char[strlen(orig) + 1];
-	strcpy_s(res,strlen(orig), orig);
-	return res;
-}
-
-
 int main() {
 	CAFFParser caffparser;
 

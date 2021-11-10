@@ -109,13 +109,11 @@ void ByteReader::StoreBytes(
     size_t size
 )
 {
-    std::printf("----------------\n");
     for (size_t i = 0; i < size; i++)
     {
         if (O32_HOST_ORDER == O32_LITTLE_ENDIAN)
         {
             if (endian == LITTLE_ENDIAN) {
-                std::printf("%02X\n", src[i]);
                 dst[i] = src[i];
             }                
             else if (endian == BIG_ENDIAN)
