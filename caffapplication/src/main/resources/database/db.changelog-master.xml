@@ -13,12 +13,12 @@
         <sqlFile relativeToChangelogFile="true" path="02_create_auth_user_roles.sql"/>
     </changeSet>
 
-    <changeSet id="4" author="mkalman">
-        <sqlFile relativeToChangelogFile="true" path="03_create_caff_table.sql"/>
-    </changeSet>
-
     <changeSet id="3" author="bkovacs">
         <sqlFile relativeToChangelogFile="true" path="03_create_admin_user.sql"/>
+    </changeSet>
+
+    <changeSet id="4" author="mkalman">
+        <sqlFile relativeToChangelogFile="true" path="04_create_caff_table.sql"/>
     </changeSet>
 
 </databaseChangeLog>
