@@ -9,4 +9,8 @@
         <sqlFile relativeToChangelogFile="true" path="01_create_auth_user.sql"/>
     </changeSet>
 
+    <changeSet id="2" author="bkovacs">
+        <sqlFile relativeToChangelogFile="true" path="02_create_auth_user_roles.sql"/>
+    </changeSet>
+
 </databaseChangeLog>

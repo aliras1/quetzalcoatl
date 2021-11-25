@@ -50,6 +50,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                                 .logoutSuccessHandler((httpServletRequest, httpServletResponse, authentication) -> {
                                     httpServletResponse.setStatus(HttpServletResponse.SC_OK);
                                 })
+                        .and().headers().frameOptions().disable()
                         .and().csrf().disable()
                         .cors();
         //@formatter:on

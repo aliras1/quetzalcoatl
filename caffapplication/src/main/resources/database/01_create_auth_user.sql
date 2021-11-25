@@ -1,5 +1,5 @@
 CREATE TABLE auth_user (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
-    username VARCHAR(256) NOT NULL,
+    username VARCHAR(256) NOT NULL UNIQUE,
     password_hash VARCHAR(256) NOT NULL
 );
