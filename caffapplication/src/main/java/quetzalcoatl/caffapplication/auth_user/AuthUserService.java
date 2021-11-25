@@ -19,7 +19,7 @@ public class AuthUserService {
 
     public void create(CreateUserRequestDTO requestDTO) {
         if(authUserRepository.findByUsername(requestDTO.getUsername()).isPresent()){
-            throw new RuntimeException("Email is already in use!");
+            throw new RuntimeException("Username is already in use!");
         }
         AuthUser authUser = new AuthUser();
         authUser.setRoles(Set.of(Role.ROLE_SIMPLE_USER));
