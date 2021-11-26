@@ -5,6 +5,8 @@
 
 #include "ByteReader.h"
 #include "Gif.h"
+#include "CIFFdto.h"
+#include "CAFFdto.h"
 
 using namespace std;
 using namespace Orionark::Utility;
@@ -22,14 +24,18 @@ public:
 
 		char* buffer = new char[length];
 
-		std::cout << "Reading " << length << " characters... ";
+		if(shallLog)
+			std::cout << "Reading " << length << " characters... ";
 		// read data as a block:
 		is.read(buffer, length);
-
-		if (is)
-			std::cout << "all characters read successfully.";
+		
+		if (is) {
+			if (shallLog)
+				std::cout << "all characters read successfully.";
+		}
 		else {
-			std::cout << "error: only " << is.gcount() << " could be read";
+			if (shallLog)
+				std::cout << "error: only " << is.gcount() << " could be read";
 			throw;
 		}
 
@@ -37,6 +43,10 @@ public:
 
 		this->bytereader = new ByteReader(buffer, length);
 		this->bytereader->SetEndian(LITTLE_ENDIAN);
+	}
+
+	CAFFParser(string filename, bool shallLog) : CAFFParser(filename){
+		setShallLog(shallLog);
 	}
 
 	~CAFFParser() {
@@ -61,14 +71,17 @@ public:
 		char day = this->bytereader->ReadByte();
 		char hour = this->bytereader->ReadByte();
 		char minute = this->bytereader->ReadByte();
-		std::cout << "year: " << (int)year << " month: " << (int)month << " day: " << (int)day << " hour: " << (int)hour << " min: " << (int)minute << "\n";
+		if (shallLog)
+			std::cout << "year: " << (int)year << " month: " << (int)month << " day: " << (int)day << " hour: " << (int)hour << " min: " << (int)minute << "\n";
 		long long int lengthOfCreator = this->bytereader->ReadInt64();
-		string creatorName = this->bytereader->ReadString(lengthOfCreator);				
-		std::cout << "creator: " << creatorName << "\n";
+		string creatorName = this->bytereader->ReadString(lengthOfCreator);
+		if (shallLog)
+			std::cout << "creator: " << creatorName << "\n";
 
 		GifWriter writer = {};
 		string filename = "./" + this->filename + ".gif";		
 
+		vector<CIFFdto> ciffs;
 		//Ciffek beolvasasa
 		for (int i = 0; i < numberOfCIFF; i++) {		
 			//Caf animation header
@@ -86,20 +99,23 @@ public:
 			if (i == 0) {
 				GifBegin(&writer, filename.c_str(), width, height, duration / 100, 8, false);
 			}
-
-			std::cout << "-------------\n" << "CIFF" << i << "\n";
+			if (shallLog)
+				std::cout << "-------------\n" << "CIFF" << i << "\n";
 			string caption = this->readCaption();
-			std::cout << "caption: " << caption << "\n";
+			if (shallLog)
+				std::cout << "caption: " << caption << "\n";
 
 			int tagsLength = CiffHeaderSize - 36; // header_size - everithing until caption
 			tagsLength -= caption.length();
 			vector<string> tags = this->readTags(tagsLength);
-			std::cout << "tags: \n";
-			for (size_t j = 0; j < tags.size(); j++)
-			{
-				cout << tags[j] << ", ";
+			if (shallLog) {
+				std::cout << "tags: \n";
+				for (size_t j = 0; j < tags.size(); j++)
+				{
+					cout << tags[j] << ", ";
+				}
+				cout << "\n";
 			}
-			cout << "\n";
 			
 
 			uint8_t* image = new uint8_t[width * height * 4];
@@ -115,15 +131,28 @@ public:
 
 			GifWriteFrame(&writer, image, width, height, duration / 100, 8, false);
 
+			ciffs.push_back(CIFFdto(caption, tags));
+
 			delete[] image;
 		}
 
+		metadata = CAFFdto(ciffs);
 		GifEnd(&writer);
+	}
+
+	void setShallLog(bool shallPrintLogToCout) {
+		this->shallLog = shallPrintLogToCout;
+	}
+
+	CAFFdto getMetadata() {
+		return metadata;
 	}
 
 private:
 	ByteReader* bytereader;
 	string filename;
+	bool shallLog = false;
+	CAFFdto metadata;
 
 	string readCaption() {
 		string caption = "";
