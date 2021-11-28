@@ -735,15 +735,22 @@ typedef struct
 // Creates a gif file.
 // The input GIFWriter is assumed to be uninitialized.
 // The delay value is the time between frames in hundredths of a second - note that not all viewers pay much attention to this value.
+// If filename is empty,
 bool GifBegin(GifWriter* writer, const char* filename, uint32_t width, uint32_t height, uint32_t delay, int32_t bitDepth = 8, bool dither = false)
 {
     (void)bitDepth; (void)dither; // Mute "Unused argument" warnings
+    if (0 == filename || !strcmp(filename, ""))
+    {
+        writer->f = stdout;
+    }
+    else {
 #if defined(_MSC_VER) && (_MSC_VER >= 1400)
-    writer->f = 0;
-    fopen_s(&writer->f, filename, "wb");
+        writer->f = 0;
+        fopen_s(&writer->f, filename, "wb");
 #else
-    writer->f = fopen(filename, "wb");
+        writer->f = fopen(filename, "wb");
 #endif
+    }
 
     if (!writer->f) return false;
 
@@ -825,7 +832,8 @@ bool GifEnd(GifWriter* writer)
     if (!writer->f) return false;
 
     fputc(0x3b, writer->f); // end of file
-    fclose(writer->f);
+    if(writer->f != stdout)
+        fclose(writer->f);
     GIF_FREE(writer->oldImage);
 
     writer->f = NULL;
