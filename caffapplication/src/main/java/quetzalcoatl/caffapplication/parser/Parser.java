@@ -24,6 +24,8 @@ public class Parser {
 	private static final Path tmpFolder = Paths.get("tmp\\");
 
 	public static GifDto parse(Blob caff) throws IOException, SQLException, InterruptedException {
+		createTmpFolder();
+		
 		String filename = getUniqueTmpFileName();
 		
 		
@@ -45,11 +47,11 @@ public class Parser {
 
 	private static String runParser(Blob caff, Path caffPath) throws IOException, SQLException, InterruptedException {
 		
-//		var pd =Paths.get("C:\\Users\\arkos\\git\\quetzalcoatl\\caffapplication\\2.caff");
-//		
-//		var dummyCaff = Files.readAllBytes(pd);
+		var pd =Paths.get("C:\\Users\\arkos\\git\\quetzalcoatl\\caffapplication\\2.caff");
 		
-		Files.write(caffPath, caff.getBinaryStream().readAllBytes()); //dummyCaff);
+		var dummyCaff = Files.readAllBytes(pd);
+		
+		Files.write(caffPath, dummyCaff);//caff.getBinaryStream().readAllBytes()); 
 		
 		
 		ProcessBuilder pb = new ProcessBuilder(caffParserExe, caffPath.toString());
@@ -70,8 +72,19 @@ public class Parser {
 		}
 		return filename;
 	}
+	
+	public static void createTmpFolder() {
+		if(!Files.exists(tmpFolder)) {
+			try {
+				Files.createDirectories(tmpFolder);
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+	}
 
 	public static void cleanup() {
+		createTmpFolder();
 		try (var stream = Files.list(tmpFolder)) {
 			stream.filter(file -> !Files.isDirectory(file)).collect(Collectors.toSet()).forEach(f -> {
 				try {
