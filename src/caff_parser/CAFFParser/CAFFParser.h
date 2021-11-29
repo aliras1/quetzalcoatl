@@ -16,7 +16,7 @@ class CAFFParser
 {
 
 public:
-	CAFFParser(string filename) : filename(filename) {
+	CAFFParser(string filename, bool justMetadata = false) : filename(filename) {
 		fstream is(filename, ios::in | ios::binary);
 		is.seekg(0, is.end);
 		int length = is.tellg();
@@ -43,9 +43,11 @@ public:
 
 		this->bytereader = new ByteReader(buffer, length);
 		this->bytereader->SetEndian(LITTLE_ENDIAN);
+
+		this->justMetadata = justMetadata;
 	}
 
-	CAFFParser(string filename, bool shallLog) : CAFFParser(filename){
+	CAFFParser(string filename, bool shallLog, bool justMetadata) : CAFFParser(filename, justMetadata){
 		setShallLog(shallLog);
 	}
 
@@ -79,7 +81,7 @@ public:
 			std::cout << "creator: " << creatorName << "\n";
 
 		GifWriter writer = {};
-		string filename = "./" + this->filename + ".gif";		
+		string	filename = "./" + this->filename + ".gif";		
 
 		vector<CIFFdto> ciffs;
 		//Ciffek beolvasasa
@@ -96,7 +98,7 @@ public:
 			if (contentSize != width * height * 3)
 				return false;
 
-			if (i == 0) {
+			if (i == 0 && !justMetadata) {
 				GifBegin(&writer, filename.c_str(), width, height, duration / 100, 8, false);
 			}
 			if (shallLog)
@@ -128,8 +130,8 @@ public:
 
 				this->setPixel(image, j, r, g, b);
 			}
-
-			GifWriteFrame(&writer, image, width, height, duration / 100, 8, false);
+			if(!justMetadata)
+				GifWriteFrame(&writer, image, width, height, duration / 100, 8, false);
 
 			ciffs.push_back(CIFFdto(caption, tags));
 
@@ -137,7 +139,8 @@ public:
 		}
 
 		metadata = CAFFdto(ciffs);
-		GifEnd(&writer);
+		if(!justMetadata)
+			GifEnd(&writer);
 	}
 
 	void setShallLog(bool shallPrintLogToCout) {
@@ -152,6 +155,7 @@ private:
 	ByteReader* bytereader;
 	string filename;
 	bool shallLog = false;
+	bool justMetadata = false;
 	CAFFdto metadata;
 
 	string readCaption() {
