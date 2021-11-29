@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CIFFMetadataDto {
+	
 	private final String caption;
 	private final List<String> tags;
 	public CIFFMetadataDto(String caption, List<String> tags) {
