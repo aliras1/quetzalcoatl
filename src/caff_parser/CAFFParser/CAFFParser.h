@@ -55,7 +55,7 @@ public:
 		delete this->bytereader;
 	}
 
-	bool parse(bool toFile = true) {
+	bool parse() {
 		//Caff header beolvasasa
 		char CAFFheaderId = this->bytereader->ReadByte();
 		if (CAFFheaderId != 1) {
@@ -81,9 +81,7 @@ public:
 			std::cout << "creator: " << creatorName << "\n";
 
 		GifWriter writer = {};
-		string filename = "";
-		if(toFile)
-			filename = "./" + this->filename + ".gif";		
+		string	filename = "./" + this->filename + ".gif";		
 
 		vector<CIFFdto> ciffs;
 		//Ciffek beolvasasa
