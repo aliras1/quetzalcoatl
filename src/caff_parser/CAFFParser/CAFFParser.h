@@ -81,7 +81,8 @@ public:
 			std::cout << "creator: " << creatorName << "\n";
 
 		GifWriter writer = {};
-		string	filename = "./" + this->filename + ".gif";		
+		string	filename = "./" + this->filename + ".gif";
+		
 
 		vector<CIFFdto> ciffs;
 		//Ciffek beolvasasa
@@ -138,7 +139,7 @@ public:
 			delete[] image;
 		}
 
-		metadata = CAFFdto(ciffs);
+		metadata = CAFFdto(filename,ciffs);
 		if(!justMetadata)
 			GifEnd(&writer);
 	}

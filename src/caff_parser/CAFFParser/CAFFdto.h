@@ -7,10 +7,11 @@
 class CAFFdto
 {
 public:
-	CAFFdto(std::vector<CIFFdto> ciffs) :ciffs{std::move(ciffs)} {}
+	CAFFdto(std::string path, std::vector<CIFFdto> ciffs) : path(path), ciffs{std::move(ciffs)} {}
 	CAFFdto() {}
 	std::string toJson();
 private:
+	std::string path;
 	std::vector<CIFFdto> ciffs;
 };
 #endif

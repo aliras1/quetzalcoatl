@@ -2,6 +2,7 @@
 #include <algorithm>
 std::string json::betweenQMarks(std::string _string) {
 	std::string ret = "";
+	std::replace(_string.begin(), _string.end(), '\\', '/');
 	ret.append("\"");
 	ret.append(_string);
 	ret.append("\"");
