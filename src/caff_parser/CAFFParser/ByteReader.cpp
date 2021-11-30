@@ -11,15 +11,15 @@ ByteReader::ByteReader(char* data, size_t size)
 {
     if (O32_HOST_ORDER == O32_LITTLE_ENDIAN)
     {
-        endian = LITTLE_ENDIAN;
+        endian = MY_LITTLE_ENDIAN;
     }
     else if (O32_HOST_ORDER == O32_BIG_ENDIAN)
     {
-        endian = BIG_ENDIAN;
+        endian = MY_BIG_ENDIAN;
     }
     else
     {
-        endian = POP_ENDIAN;
+        endian = MY_POP_ENDIAN;
     }
 }
 
@@ -123,30 +123,30 @@ void ByteReader::StoreBytes(
     {
         if (O32_HOST_ORDER == O32_LITTLE_ENDIAN)
         {
-            if (endian == LITTLE_ENDIAN) {
+            if (endian ==MY_LITTLE_ENDIAN) {
                 dst[i] = src[i];
             }                
-            else if (endian == BIG_ENDIAN)
+            else if (endian == MY_BIG_ENDIAN)
                 dst[i] = src[(size - i - 1)];
-            else if (endian == POP_ENDIAN)
+            else if (endian == MY_POP_ENDIAN)
                 dst[i] = src[(i % 2 == 0 ? (size - i - 2) : (size - i))];
         }
         else if (O32_HOST_ORDER == O32_BIG_ENDIAN)
         {
-            if (endian == BIG_ENDIAN)
+            if (endian == MY_BIG_ENDIAN)
                 dst[i] = src[i];
-            else if (endian == LITTLE_ENDIAN)
+            else if (endian == MY_LITTLE_ENDIAN)
                 dst[i] = src[(size - i - 1)];
-            else if (endian == POP_ENDIAN)
+            else if (endian == MY_POP_ENDIAN)
                 dst[i] = src[(i % 2 == 0 ? (i + 1) : (i - 1))];
         }
         else
         {
-            if (endian == POP_ENDIAN)
+            if (endian == MY_POP_ENDIAN)
                 dst[i] = src[i];
-            else if (endian == LITTLE_ENDIAN)
+            else if (endian == MY_LITTLE_ENDIAN)
                 dst[i] = src[(i % 2 == 0 ? (size - i - 2) : (size - i))];
-            else if (endian == BIG_ENDIAN)
+            else if (endian == MY_BIG_ENDIAN)
                 dst[i] = src[(i % 2 == 0 ? (i + 1) : (i - 1))];
         }
     }

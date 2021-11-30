@@ -6,6 +6,11 @@
 #error "unsupported char size"
 #endif
 
+#ifndef BYTEREADER_H
+#define BYTEREADER_H
+
+
+
 enum
 {
     O32_LITTLE_ENDIAN = 0x03020100ul,
@@ -27,9 +32,9 @@ namespace Orionark
     {
         enum ByteEndianness
         {
-            LITTLE_ENDIAN,
-            BIG_ENDIAN,
-            POP_ENDIAN
+            MY_LITTLE_ENDIAN,
+            MY_BIG_ENDIAN,
+            MY_POP_ENDIAN
         };
 
         class ByteReader
@@ -71,3 +76,5 @@ namespace Orionark
         };
     }
 }
+
+#endif // !BYTEREADER_H

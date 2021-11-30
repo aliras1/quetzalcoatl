@@ -1,4 +1,8 @@
-﻿#include <fstream>
+﻿#ifndef CAFFPARSER_H
+#define CAFFPARSER_H
+
+
+#include <fstream>
 #include <cstring>
 #include <iostream>
 #include <vector>
@@ -42,7 +46,7 @@ public:
 		is.close();
 
 		this->bytereader = new ByteReader(buffer, length);
-		this->bytereader->SetEndian(LITTLE_ENDIAN);
+		this->bytereader->SetEndian(MY_LITTLE_ENDIAN);
 
 		this->justMetadata = justMetadata;
 	}
@@ -195,3 +199,5 @@ private:
 		pixel[3] = 255;  // no alpha
 	}
 };
+
+#endif // !CAFFPARSER_H
