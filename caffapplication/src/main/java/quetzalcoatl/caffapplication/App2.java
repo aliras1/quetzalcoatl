@@ -18,9 +18,9 @@ public class App2
     
 	public static void main( String[] args ) throws IOException, SQLException, InterruptedException
 	{
-		var pd =Paths.get("D:\\Bence\\BME\\MSc\\2.felev\\szamitogep_biztonsag\\backend\\src\\caff_parser\\CAFFParser\\2.caff");
+		var pd =Paths.get("C:\\Users\\arkos\\git\\quetzalcoatl\\caffapplication\\2.caff");
 		var dummyCaff = Files.readAllBytes(pd);
-
+		
 		byte[] bytes = dummyCaff;
 		Blob blob = new javax.sql.rowset.serial.SerialBlob(bytes);
 		var gif =Parser.parse(blob);
