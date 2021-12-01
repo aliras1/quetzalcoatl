@@ -29,7 +29,7 @@ public class DummyParser {
 			init();
 		}
 		try {
-			int i =(int)caff.getBytes(100, 1)[0];
+			int i =(int)caff.getBytes(405, 1)[0]%8;
 			dummy.setGif(dummyGifs[i]);
 		} catch (SQLException e) {
 			e.printStackTrace();
