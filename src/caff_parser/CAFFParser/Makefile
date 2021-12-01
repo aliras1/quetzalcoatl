@@ -27,7 +27,7 @@ $(BUILD_DIR)/CAFFParser.exe : $(OBJS)
 
 # c++ source
 $(BUILD_DIR)/%.cpp.o: %.cpp
-	$(MKDIR_P) $(dir $@)
+	if not exist "build" $(MKDIR_P) build
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c $< -o $@
 
 
