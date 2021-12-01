@@ -18,6 +18,8 @@ CXXFLAGS ?= -std=c++14
 
 CPPFLAGS ?= -MMD -MP
 
+MKDIR_P ?= mkdir -p
+
 edit : $(BUILD_DIR)/CAFFParser.exe
 
 $(BUILD_DIR)/CAFFParser.exe : $(OBJS)
@@ -35,5 +37,3 @@ clean:
 	$(RM) -r $(BUILD_DIR)
 
 -include $(DEPS)
-
-MKDIR_P ?= mkdir -p
