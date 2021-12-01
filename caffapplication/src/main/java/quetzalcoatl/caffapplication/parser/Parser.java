@@ -47,9 +47,6 @@ public class Parser {
 
 	private static String runParser(Blob caff, Path caffPath) throws IOException, SQLException, InterruptedException {
 		
-		//var pd =Paths.get("C:\\Users\\arkos\\git\\quetzalcoatl\\caffapplication\\2.caff");
-		
-		//var dummyCaff = Files.readAllBytes(pd);
 		
 		Files.write(caffPath, caff.getBinaryStream().readAllBytes()); 
 		
