@@ -19,7 +19,8 @@ import java.util.Objects;
 @Service
 public class FilesStorageServiceImpl implements FilesStorageService {
 
-    private final Path root = Paths.get("gifs");
+//    private final Path root = Paths.get("gifs"); // on windows
+    private final Path root = Paths.get("/app/gifs");
 
     @Override
     public void save(GifDto gifDto, String filename) {

@@ -20,6 +20,7 @@ public class Parser {
 	private static final Random random = new Random();
 
 	private static final String caffParserExe = "./CAFFParser"; // on windows: "..\src\caff_parser\x64\Debug\CAFFParser.exe"
+//	private static final String caffParserExe = "src\\caff_parser\\x64\\Debug\\CAFFParser.exe";
 
 	private static final Path tmpFolder = Paths.get("tmp/");
 

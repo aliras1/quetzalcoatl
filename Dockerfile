@@ -23,4 +23,5 @@ COPY --from=maven_build /app/target/caffapplication-0.0.1-SNAPSHOT.jar /app/caff
 
 #run the app
 WORKDIR /app
+RUN mkdir /app/gifs
 CMD java -jar /app/caffapplication-0.0.1-SNAPSHOT.jar
