@@ -63,7 +63,7 @@ public:
 		//Caff header beolvasasa
 		char CAFFheaderId = this->bytereader->ReadByte();
 		if (CAFFheaderId != 1) {
-			//return false;
+			return false;
 		}
 		long long int CAFFheaderLength = this->bytereader->ReadInt64();
 		string caff = this->bytereader->ReadString(4);
@@ -146,6 +146,7 @@ public:
 		metadata = CAFFdto(filename,ciffs);
 		if(!justMetadata)
 			GifEnd(&writer);
+		return true;
 	}
 
 	void setShallLog(bool shallPrintLogToCout) {

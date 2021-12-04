@@ -24,6 +24,15 @@
     <ClInclude Include="Gif.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="CAFFdto.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CIFFdto.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="JsonUtil.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CAFFParser.cpp">
@@ -33,6 +42,15 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CAFFdto.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CIFFdto.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="JsonUtil.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

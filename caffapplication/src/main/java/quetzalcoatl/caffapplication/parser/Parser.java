@@ -19,9 +19,9 @@ public class Parser {
 	private static final Set<String> underProcess = new HashSet<>();
 	private static final Random random = new Random();
 
-	private static final String caffParserExe = "..\\src\\caff_parser\\x64\\Debug\\CAFFParser.exe";
+	private static final String caffParserExe = "./CAFFParser"; // on windows: "..\src\caff_parser\x64\Debug\CAFFParser.exe"
 
-	private static final Path tmpFolder = Paths.get("tmp\\");
+	private static final Path tmpFolder = Paths.get("tmp/");
 
 	public static GifDto parse(Blob caff) throws IOException, SQLException, InterruptedException {
 		createTmpFolder();
@@ -46,14 +46,13 @@ public class Parser {
 	}
 
 	private static String runParser(Blob caff, Path caffPath) throws IOException, SQLException, InterruptedException {
-		
-		
-		Files.write(caffPath, caff.getBinaryStream().readAllBytes()); 
-		
-		
+		Files.write(caffPath, caff.getBinaryStream().readAllBytes());
+
+		System.out.println(System.getProperty("user.dir"));
 		ProcessBuilder pb = new ProcessBuilder(caffParserExe, caffPath.toString());
 		Process p = pb.start();
 		BufferedReader br = new BufferedReader(new InputStreamReader(p.getInputStream()));
+
 		String rawJson = br.readLine();
 		p.waitFor();
 		return rawJson;
