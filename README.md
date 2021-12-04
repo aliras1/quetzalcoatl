@@ -15,3 +15,10 @@ To open the project, you need to
 I (@aliras1) was unable to make Papyrus' sequence diagram editor work, thus I ditched it in favor of StarUML.
 
 To edit the diagrams in the `drawio` folder visit [the online editors page.](https://app.diagrams.net/)
+
+## Build Docker
+
+```
+docker build -t caffapp .
+docker run -p 8080:8080 --rm -it caffapp
+```
