@@ -21,4 +21,8 @@
         <sqlFile relativeToChangelogFile="true" path="04_create_caff_table.sql"/>
     </changeSet>
 
+    <changeSet id="5" author="bkovacs">
+        <sqlFile relativeToChangelogFile="true" path="05_create_test_data.sql"/>
+    </changeSet>
+
 </databaseChangeLog>

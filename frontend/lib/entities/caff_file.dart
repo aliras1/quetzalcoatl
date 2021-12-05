@@ -1,13 +1,13 @@
 class CaffFile{
-  int caffId;
-  String name;
+  int id;
+  String title;
 
-  CaffFile({required this.caffId, required this.name});
+  CaffFile({required this.id, required this.title});
 
   factory CaffFile.fromJson(Map<String, dynamic> json) {
     return CaffFile(
-      caffId: json['caffId'],
-      name: json['name'],
+      id: json['id'],
+      title: json['title'],
     );
   }
 }
