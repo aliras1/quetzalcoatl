@@ -17,6 +17,7 @@ public class AuthUserService {
         this.authUserRepository = authUserRepository;
     }
 
+    @SuppressWarnings("all")
     public void create(CreateUserRequestDTO requestDTO) {
         if(authUserRepository.findByUsername(requestDTO.getUsername()).isPresent()){
             throw new RuntimeException("Username is already in use!");

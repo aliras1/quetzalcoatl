@@ -13,7 +13,7 @@ import java.util.Set;
 @Entity
 public class AuthUser extends AbstractEntity {
 
-    private String username;
+	private String username;
 
     private String passwordHash;
 
@@ -43,5 +43,41 @@ public class AuthUser extends AbstractEntity {
 
     public void setRoles(Set<Role> roles) {
         this.roles = roles;
+    }
+    @Override
+    public int hashCode() {
+    	final int prime = 31;
+    	int result = super.hashCode();
+    	result = prime * result + ((passwordHash == null) ? 0 : passwordHash.hashCode());
+    	result = prime * result + ((roles == null) ? 0 : roles.hashCode());
+    	result = prime * result + ((username == null) ? 0 : username.hashCode());
+    	return result;
+    }
+    
+    @Override
+    public boolean equals(Object obj) {
+    	if (this == obj)
+    		return true;
+    	if (!super.equals(obj))
+    		return false;
+    	if (getClass() != obj.getClass())
+    		return false;
+    	AuthUser other = (AuthUser) obj;
+    	if (passwordHash == null) {
+    		if (other.passwordHash != null)
+    			return false;
+    	} else if (!passwordHash.equals(other.passwordHash))
+    		return false;
+    	if (roles == null) {
+    		if (other.roles != null)
+    			return false;
+    	} else if (!roles.equals(other.roles))
+    		return false;
+    	if (username == null) {
+    		if (other.username != null)
+    			return false;
+    	} else if (!username.equals(other.username))
+    		return false;
+    	return true;
     }
 }

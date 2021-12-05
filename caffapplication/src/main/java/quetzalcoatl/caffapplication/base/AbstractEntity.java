@@ -1,17 +1,17 @@
 package quetzalcoatl.caffapplication.base;
 
+import java.util.Objects;
+
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.MappedSuperclass;
+
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Parameter;
 import org.hibernate.id.enhanced.SequenceStyleGenerator;
 import org.hibernate.proxy.HibernateProxyHelper;
 import org.springframework.data.domain.Persistable;
-
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.MappedSuperclass;
-import java.util.Objects;
 
 /**
  * Ős osztály az Entitások számára

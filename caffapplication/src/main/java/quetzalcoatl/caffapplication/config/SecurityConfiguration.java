@@ -1,7 +1,8 @@
 package quetzalcoatl.caffapplication.config;
 
+import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.context.annotation.Bean;
-import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
@@ -16,8 +17,6 @@ import org.springframework.security.web.AuthenticationEntryPoint;
 import org.springframework.security.web.authentication.AuthenticationEntryPointFailureHandler;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 import org.springframework.security.web.authentication.HttpStatusEntryPoint;
-
-import javax.servlet.http.HttpServletResponse;
 
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(securedEnabled = true)
@@ -47,9 +46,9 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                         .and()
                             .logout()
                                 .logoutUrl("/api/logout")
-                                .logoutSuccessHandler((httpServletRequest, httpServletResponse, authentication) -> {
-                                    httpServletResponse.setStatus(HttpServletResponse.SC_OK);
-                                })
+                                .logoutSuccessHandler((httpServletRequest, httpServletResponse, authentication) -> 
+                                    httpServletResponse.setStatus(HttpServletResponse.SC_OK)
+                                )
                         .and().headers().frameOptions().disable()
                         .and().csrf().disable()
                         .cors();

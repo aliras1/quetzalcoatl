@@ -8,6 +8,9 @@ import java.sql.SQLException;
 import java.util.Arrays;
 
 public class DummyParser {
+	
+	private DummyParser() {}
+	
 	private static byte[][] dummyGifs = new byte[8][];
 	static boolean inited = false;
 	private static void init()
@@ -29,7 +32,7 @@ public class DummyParser {
 			init();
 		}
 		try {
-			int i =(int)caff.getBytes(405, 1)[0]%8;
+			int i =caff.getBytes(405, 1)[0]%8;
 			dummy.setGif(dummyGifs[i]);
 		} catch (SQLException e) {
 			e.printStackTrace();

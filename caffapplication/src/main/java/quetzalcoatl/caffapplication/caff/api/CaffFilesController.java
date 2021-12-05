@@ -1,8 +1,12 @@
 package quetzalcoatl.caffapplication.caff.api;
 
-import org.springframework.core.io.ByteArrayResource;
+import java.io.IOException;
+import java.sql.SQLException;
+import java.util.Objects;
+
+import javax.sql.rowset.serial.SerialBlob;
+
 import org.springframework.core.io.Resource;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -11,15 +15,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestPart;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.server.ResponseStatusException;
+
 import quetzalcoatl.caffapplication.caff.CaffFile;
 import quetzalcoatl.caffapplication.caff.CaffRepository;
 import quetzalcoatl.caffapplication.file_storage.FilesStorageService;
 import quetzalcoatl.caffapplication.parser.GifDto;
 import quetzalcoatl.caffapplication.parser.Parser;
-
-import javax.sql.rowset.serial.SerialBlob;
-import java.util.Objects;
 
 @RestController
 @RequestMapping("/api/caff")
@@ -39,7 +40,7 @@ public class CaffFilesController {
     }
 
     @PostMapping(consumes =  {MediaType.MULTIPART_FORM_DATA_VALUE})
-    public void uploadImage(@RequestPart("caffFile") MultipartFile caff, @RequestPart("title") String title) throws Exception {
+    public void uploadImage(@RequestPart("caffFile") MultipartFile caff, @RequestPart("title") String title) throws IOException, SQLException, InterruptedException {
         CaffFile caffFile = new CaffFile();
         GifDto gif = Parser.parse(new SerialBlob(caff.getBytes()));
         caffFile.setTitle(title);
