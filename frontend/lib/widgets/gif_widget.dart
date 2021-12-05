@@ -24,6 +24,7 @@ class GifWidget extends StatefulWidget {
 
 class _GifWidgetState extends State<GifWidget> {
   File? _gifFile;
+  Uint8List ?bytes;
 
   @override
   void initState() {
@@ -33,8 +34,9 @@ class _GifWidgetState extends State<GifWidget> {
         .get('/api/caff/getCaff/' + widget.gifId.toString())
         .then((response) async {
       if (response.statusCode == 200) {
-        Uint8List bytes = response.bodyBytes;
-        _gifFile = File.fromRawPath(bytes);
+        setState(() {
+          bytes = response.bodyBytes;
+        });
       } else {
         CaffToast.showError(
             'Something went wrong! Please check your network connection!');
@@ -47,10 +49,12 @@ class _GifWidgetState extends State<GifWidget> {
     return Container(
       child: Column(
         children: [
-          _gifFile == null ? Container() : Container(
+          bytes == null ? Container() : Container(
+            height: 600,
+            width: 500,
             decoration: BoxDecoration(
                 image: DecorationImage(
-                    image: FileImage(_gifFile!))),
+                    image: MemoryImage(bytes!), fit: BoxFit.fill)),
           ),
         ],
       ),
