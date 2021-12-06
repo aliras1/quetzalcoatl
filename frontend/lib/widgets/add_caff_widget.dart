@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_phoenix/flutter_phoenix.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
 import '../session.dart';
@@ -135,7 +136,8 @@ class _AddCaffWidgetState extends State<AddCaffWidget> {
               backgroundColor: Colors.green,
               textColor: Colors.white,
               fontSize: 16.0);
-          Navigator.of(context).pop();
+          Phoenix.rebirth(context);
+          // Navigator.of(context).pop();
         } else {
           Fluttertoast.showToast(
               msg: "Something went wrong!",
