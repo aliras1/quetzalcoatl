@@ -21,7 +21,7 @@ public class FilesStorageServiceImpl implements FilesStorageService {
     @Override
     public void save(GifDto gifDto, String filename) {
         try {
-            Files.copy(new ByteArrayInputStream(gifDto.getGif()), this.root.resolve(filename));
+            Files.copy(new ByteArrayInputStream(gifDto.getGif()), this.root.resolve(filename + ".gif"));
         } catch (Exception e) {
             throw new RuntimeException("Could not store the file. Error: " + e.getMessage());
         }
