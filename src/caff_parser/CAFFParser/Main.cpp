@@ -10,8 +10,12 @@ int main(int argc, char** argv) {
 		}
 
 		CAFFParser caffparser(argv[1], justmetadata);
-		caffparser.parse();
-		std::cout << caffparser.getMetadata().toJson() << '\n';
+		if (caffparser.tryParse()) {
+			std::cout << caffparser.getMetadata().toJson() << '\n';
+		}
+		else {
+			std::cout << "Invalid CAFF\n";
+		}
 	}
 	else {
 		std::cout << "No CAFF file was specified to parse\n";

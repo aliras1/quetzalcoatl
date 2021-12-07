@@ -59,6 +59,32 @@ public:
 		delete this->bytereader;
 	}
 
+	bool tryParse() {
+		try {
+			parse();
+		}
+		catch (...) {
+			
+		}	
+		return result;
+	}
+
+	void setShallLog(bool shallPrintLogToCout) {
+		this->shallLog = shallPrintLogToCout;
+	}
+
+	CAFFdto getMetadata() {
+		return metadata;
+	}
+
+private:
+	ByteReader* bytereader;
+	string filename;
+	bool shallLog = false;
+	bool justMetadata = false;
+	bool result = false;
+	CAFFdto metadata;
+
 	bool parse() {
 		//Caff header beolvasasa
 		char CAFFheaderId = this->bytereader->ReadByte();
@@ -86,11 +112,11 @@ public:
 
 		GifWriter writer = {};
 		string	filename = "./" + this->filename + ".gif";
-		
+
 
 		vector<CIFFdto> ciffs;
 		//Ciffek beolvasasa
-		for (int i = 0; i < numberOfCIFF; i++) {		
+		for (int i = 0; i < numberOfCIFF; i++) {
 			//Caf animation header
 			char CAFFAnimationId = this->bytereader->ReadByte();
 			long long int CAFFAnimationHeaderLength = this->bytereader->ReadInt64();
@@ -123,7 +149,7 @@ public:
 				}
 				cout << "\n";
 			}
-			
+
 
 			uint8_t* image = new uint8_t[width * height * 4];
 
@@ -135,7 +161,7 @@ public:
 
 				this->setPixel(image, j, r, g, b);
 			}
-			if(!justMetadata)
+			if (!justMetadata)
 				GifWriteFrame(&writer, image, width, height, duration / 100, 8, false);
 
 			ciffs.push_back(CIFFdto(caption, tags));
@@ -143,26 +169,11 @@ public:
 			delete[] image;
 		}
 
-		metadata = CAFFdto(filename,ciffs);
-		if(!justMetadata)
+		metadata = CAFFdto(filename, ciffs);
+		if (!justMetadata)
 			GifEnd(&writer);
-		return true;
+		result = true;
 	}
-
-	void setShallLog(bool shallPrintLogToCout) {
-		this->shallLog = shallPrintLogToCout;
-	}
-
-	CAFFdto getMetadata() {
-		return metadata;
-	}
-
-private:
-	ByteReader* bytereader;
-	string filename;
-	bool shallLog = false;
-	bool justMetadata = false;
-	CAFFdto metadata;
 
 	string readCaption() {
 		string caption = "";
