@@ -20,7 +20,7 @@ import org.springframework.security.web.authentication.HttpStatusEntryPoint;
 import javax.servlet.http.HttpServletResponse;
 
 @EnableWebSecurity
-@EnableGlobalMethodSecurity(securedEnabled = true)
+@EnableGlobalMethodSecurity(securedEnabled = true, prePostEnabled = true)
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     private final UserDetailsService userDetailsService;
@@ -34,6 +34,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         //@formatter:off
         http.authorizeRequests()
                         .antMatchers("/api/login").permitAll()
+                        .antMatchers("/api/users").permitAll()
                         .antMatchers("/h2/console/**").permitAll()
                         .anyRequest().authenticated()
                         .and()

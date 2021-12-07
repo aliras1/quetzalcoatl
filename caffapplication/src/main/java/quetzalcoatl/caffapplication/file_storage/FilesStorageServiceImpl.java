@@ -1,5 +1,6 @@
 package quetzalcoatl.caffapplication.file_storage;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.UrlResource;
 import org.springframework.stereotype.Service;
@@ -15,13 +16,13 @@ import java.nio.file.Paths;
 @Service
 public class FilesStorageServiceImpl implements FilesStorageService {
 
-//    private final Path root = Paths.get("gifs"); // on windows
-    private final Path root = Paths.get("/app/gifs");
+    @Value("${environment.gif}")
+    private String rootPathStr;
 
     @Override
     public void save(GifDto gifDto, String filename) {
         try {
-            Files.copy(new ByteArrayInputStream(gifDto.getGif()), this.root.resolve(filename + ".gif"));
+            Files.copy(new ByteArrayInputStream(gifDto.getGif()), Paths.get(rootPathStr).resolve(filename + ".gif"));
         } catch (Exception e) {
             throw new RuntimeException("Could not store the file. Error: " + e.getMessage());
         }
@@ -30,7 +31,7 @@ public class FilesStorageServiceImpl implements FilesStorageService {
     @Override
     public Resource load(String filename) {
         try {
-            Path file = root.resolve(filename);
+            Path file = Paths.get(rootPathStr).resolve(filename);
             Resource resource = new UrlResource(file.toUri() + ".gif");
 
             if (resource.exists() || resource.isReadable()) {
@@ -45,6 +46,6 @@ public class FilesStorageServiceImpl implements FilesStorageService {
 
     @Override
     public void deleteAll() {
-        FileSystemUtils.deleteRecursively(root.toFile());
+        FileSystemUtils.deleteRecursively(Paths.get(rootPathStr).toFile());
     }
 }

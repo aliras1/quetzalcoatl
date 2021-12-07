@@ -5,7 +5,7 @@ import 'package:http/http.dart' as http;
 
 class Session {
   Map<String, String> headers = {};
-  String domainName = 'http://10.0.2.2:8080';
+  String domainName = 'http://192.168.0.101:8080';
 
   Future<dynamic> get(String url) async {
     http.Response response = await http.get(Uri.parse(domainName + url), headers: headers);
@@ -33,7 +33,7 @@ class Session {
     Map<String, String> newHeaders = headers;
     newHeaders.addAll({'Content-type': 'application/json'});
     http.Response response =
-        await http.post(Uri.parse(domainName + url), body: data, headers: headers);
+        await http.post(Uri.parse(domainName + url), body: json.encode(data), headers: headers);
     updateCookie(response);
     return response;
   }

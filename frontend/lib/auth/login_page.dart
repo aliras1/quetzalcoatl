@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_phoenix/flutter_phoenix.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:frontend/entities/user.dart';
 import 'package:frontend/session.dart';
@@ -307,17 +308,28 @@ class _LoginPageState extends State<LoginPage> {
       _loading = true;
     });
 
-    /*
-    if (response.statusCode == 200) {
+    var body = new Map<String, dynamic>();
+    body['username'] = _regUsernameController.text;
+    body['password'] = _regPasswordController.text;
+    session.postJson('/api/users', body).then((response) {
 
-      } else if (response.statusCode == 500) {
+      if (response.statusCode == 200) {
         setState(() {
           _loading = false;
         });
-        if (response.body != null &&
-            json.decode(response.body)['message'] != null &&
-            json.decode(response.body)['message'] ==
-                'Username is already in use!') {
+        Fluttertoast.showToast(
+            msg: "Successful registration!",
+            toastLength: Toast.LENGTH_LONG,
+            gravity: ToastGravity.CENTER,
+            timeInSecForIosWeb: 1,
+            backgroundColor: Colors.red,
+            textColor: Colors.white,
+            fontSize: 16.0);
+        Phoenix.rebirth(context);
+      } else if (response.statusCode == 500) {
+          setState(() {
+            _loading = false;
+          });
           Fluttertoast.showToast(
               msg: "This username is already in use!",
               toastLength: Toast.LENGTH_LONG,
@@ -327,33 +339,20 @@ class _LoginPageState extends State<LoginPage> {
               textColor: Colors.white,
               fontSize: 16.0);
         } else {
+          setState(() {
+            _loading = false;
+          });
           Fluttertoast.showToast(
-              msg: "Something went wrong!",
-              toastLength: Toast.LENGTH_LONG,
-              gravity: ToastGravity.CENTER,
-              timeInSecForIosWeb: 1,
-              backgroundColor: Colors.red,
-              textColor: Colors.white,
-              fontSize: 16.0);
+            msg: "Something went wrong!",
+            toastLength: Toast.LENGTH_LONG,
+            gravity: ToastGravity.CENTER,
+            timeInSecForIosWeb: 1,
+            backgroundColor: Colors.red,
+            textColor: Colors.white,
+            fontSize: 16.0,
+          );
         }
-      } else {
-        setState(() {
-          _loading = false;
-        });
-        Fluttertoast.showToast(
-          msg: "Something went wrong!",
-          toastLength: Toast.LENGTH_LONG,
-          gravity: ToastGravity.CENTER,
-          timeInSecForIosWeb: 1,
-          backgroundColor: Colors.red,
-          textColor: Colors.white,
-          fontSize: 16.0,
-        );
-      }
-    */
-    await Future.delayed(Duration(seconds: 3));
-    _loading = false;
-    Navigator.of(context).pop();
+    });
   }
 
   @override

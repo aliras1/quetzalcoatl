@@ -14,17 +14,23 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 import com.google.gson.Gson;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
+@Component("parser")
 public class Parser {
-	private static final Set<String> underProcess = new HashSet<>();
-	private static final Random random = new Random();
+	private final Set<String> underProcess = new HashSet<>();
+	private final Random random = new Random();
+	private final Path tmpFolder = Paths.get("./tmp");
 
-	private static final String caffParserExe = "./CAFFParser"; // on windows: "..\src\caff_parser\x64\Debug\CAFFParser.exe"
-//	private static final String caffParserExe = "src\\caff_parser\\x64\\Debug\\CAFFParser.exe";
+	@Value("${environment.parser}")
+	private String caffParserPath;
 
-	private static final Path tmpFolder = Paths.get("tmp/");
+	public Parser() {
+		cleanup();
+	}
 
-	public static GifDto parse(Blob caff) throws IOException, SQLException, InterruptedException {
+	public GifDto parse(Blob caff) throws IOException, SQLException, InterruptedException {
 		createTmpFolder();
 		
 		String filename = getUniqueTmpFileName();
@@ -46,11 +52,11 @@ public class Parser {
 		return ret;
 	}
 
-	private static String runParser(Blob caff, Path caffPath) throws IOException, SQLException, InterruptedException {
+	private String runParser(Blob caff, Path caffPath) throws IOException, SQLException, InterruptedException {
 		Files.write(caffPath, caff.getBinaryStream().readAllBytes());
 
 		System.out.println(System.getProperty("user.dir"));
-		ProcessBuilder pb = new ProcessBuilder(caffParserExe, caffPath.toString());
+		ProcessBuilder pb = new ProcessBuilder(caffParserPath, caffPath.toString());
 		Process p = pb.start();
 		BufferedReader br = new BufferedReader(new InputStreamReader(p.getInputStream()));
 
@@ -59,7 +65,7 @@ public class Parser {
 		return rawJson;
 	}
 
-	private static String getUniqueTmpFileName() {
+	private String getUniqueTmpFileName() {
 		String filename;
 		synchronized (underProcess) {
 			do {
@@ -70,7 +76,7 @@ public class Parser {
 		return filename;
 	}
 	
-	public static void createTmpFolder() {
+	public void createTmpFolder() {
 		if(!Files.exists(tmpFolder)) {
 			try {
 				Files.createDirectories(tmpFolder);
@@ -80,7 +86,7 @@ public class Parser {
 		}
 	}
 
-	public static void cleanup() {
+	public void cleanup() {
 		createTmpFolder();
 		try (var stream = Files.list(tmpFolder)) {
 			stream.filter(file -> !Files.isDirectory(file)).collect(Collectors.toSet()).forEach(f -> {

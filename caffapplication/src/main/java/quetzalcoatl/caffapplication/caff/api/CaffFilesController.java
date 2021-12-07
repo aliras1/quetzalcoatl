@@ -1,8 +1,14 @@
 package quetzalcoatl.caffapplication.caff.api;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -11,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestPart;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
+import quetzalcoatl.caffapplication.base.auth.Role;
 import quetzalcoatl.caffapplication.caff.CaffFile;
 import quetzalcoatl.caffapplication.caff.CaffRepository;
 import quetzalcoatl.caffapplication.file_storage.FilesStorageService;
@@ -24,6 +31,9 @@ import java.util.stream.Collectors;
 @RestController
 @RequestMapping("/api/caff")
 public class CaffFilesController {
+
+    @Autowired
+    private Parser parser;
 
     private final CaffRepository caffRepository;
     private final FilesStorageService filesStorageService;
@@ -41,7 +51,7 @@ public class CaffFilesController {
     @PostMapping(consumes =  {MediaType.MULTIPART_FORM_DATA_VALUE})
     public void uploadImage(@RequestPart("caffFile") MultipartFile caff, @RequestPart("title") String title) throws Exception {
         CaffFile caffFile = new CaffFile();
-        GifDto gif = Parser.parse(new SerialBlob(caff.getBytes()));
+        GifDto gif = parser.parse(new SerialBlob(caff.getBytes()));
         caffFile.setTitle(title);
         filesStorageService.save(gif, Objects.requireNonNull(caffRepository.saveAndFlush(caffFile).getId()).toString());
     }
@@ -56,6 +66,7 @@ public class CaffFilesController {
         return ResponseEntity.ok().body(caffRepository.findAll().stream().map(SearchCaffByNameResponseDTO::new).collect(Collectors.toList()));
     }
 
+    @PreAuthorize("hasAuthority('ROLE_ADMIN')")
     @DeleteMapping("/{id}")
     public void delete(@PathVariable("id") Long id) {
         caffRepository.deleteById(id);

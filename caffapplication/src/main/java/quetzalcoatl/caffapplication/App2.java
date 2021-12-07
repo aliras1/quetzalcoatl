@@ -23,7 +23,8 @@ public class App2
 		
 		byte[] bytes = dummyCaff;
 		Blob blob = new javax.sql.rowset.serial.SerialBlob(bytes);
-		var gif =Parser.parse(blob);
+		Parser parser = new Parser();
+		var gif = parser.parse(blob);
 		
 		System.out.println(new String(Arrays.copyOfRange(gif.getGif(), 0, 4)));
 		System.out.println(gif.getGif().length);

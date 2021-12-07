@@ -209,6 +209,9 @@ class _CaffSearcherWidgetState extends State<CaffSearcherWidget> {
         setState(() {
           _caffTitles.removeAt(index);
         });
+      } else if (response.statusCode == 403) {
+        CaffToast.showError(
+            'Unauthorized!');
       } else {
         CaffToast.showError(
             'Something went wrong! Please check your network connection!');

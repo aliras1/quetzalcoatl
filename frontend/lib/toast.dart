@@ -4,7 +4,7 @@ import 'package:fluttertoast/fluttertoast.dart';
 class CaffToast{
   static void show(String message, Color color){
     Fluttertoast.showToast(
-        msg: "Successful login!",
+        msg: message,
         toastLength: Toast.LENGTH_LONG,
         gravity: ToastGravity.CENTER,
         timeInSecForIosWeb: 1,
